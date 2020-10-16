@@ -35,29 +35,52 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
         didSet { assert(byHours?.allSatisfy { (0..<24).contains($0) } ?? true, "by-hour rules must be between 0 and 24 (exclusive): \(byHours ?? [])") }
     }
     /// At which days (of the week/year) it should occur.
-    public var byDay: [SignedDay]?
+    public var byDays: [SignedDay]?
     /// At which days of the month it should occur.
     public var byDaysOfMonth: [SignedDayOfMonth]?
     /// At which days of the year it should occur.
     public var byDaysOfYear: [SignedDayOfYear]?
     /// At which weeks of the year it should occur.
-    public var byWeekOfYear: [SignedWeekOfYear]?
+    public var byWeeksOfYear: [SignedWeekOfYear]?
     /// At which months it should occur.
     /// Must be between 1 and 12 (inclusive).
-    public var byMonthOfYear: [Int]? {
-        didSet { assert(byMonthOfYear?.allSatisfy { (1...12).contains($0) } ?? true, "by-month-of-year rules must be between 1 and 12: \(byMonthOfYear ?? [])") }
+    public var byMonths: [Int]? {
+        didSet { assert(byMonths?.allSatisfy { (1...12).contains($0) } ?? true, "by-month-of-year rules must be between 1 and 12: \(byMonths ?? [])") }
+    }
+    /// Specifies a list of values
+    /// that corresponds to the nth occurrence within the set of
+    /// recurrence instances specified by the rule. By-set-pos operates on
+    /// a set of recurrence instances in one interval of the recurrence
+    /// rule.  For example, in a weekly rule, the interval would be one
+    /// week A set of recurrence instances starts at the beginning of the
+    /// interval defined by the frequency rule part.  Valid values are 1 to 366
+    /// or -366 to -1.  It MUST only be used in conjunction with another
+    /// by-xxx rule part.
+    public var bySetPos: [Int]? {
+        didSet { assert(bySetPos?.allSatisfy { (1...366).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 366 or -366 and -1: \(bySetPos ?? [])") }
     }
     /// The day on which the workweek starts.
     /// Monday by default.
     public var startOfWorkweek: DayOfWeek?
 
-    private var properties: [String: ICalendarEncodable?] {
-        [
-            "FREQ": frequency,
-            "INTERVAL": interval,
-            "UNTIL": until,
-            "COUNT": count
+    private var properties: [(String, ICalendarEncodable?)] {
+        let groupedProperties: [(String, [ICalendarEncodable]?)] = [
+            ("FREQ", [frequency]),
+            ("INTERVAL", interval.map { [$0] } ?? []),
+            ("UNTIL", until.map { [$0] } ?? []),
+            ("COUNT", count.map { [$0] } ?? []),
+            ("BYSECOND", bySeconds),
+            ("BYMINUTE", byMinutes),
+            ("BYHOUR", byHours),
+            ("BYDAY", byDays),
+            ("BYMONTHDAY", byDaysOfMonth),
+            ("BYYEARDAY", byDaysOfYear),
+            ("BYWEEKNO", byWeeksOfYear),
+            ("BYMONTH", byMonths),
+            ("BYSETPOS", bySetPos),
+            ("WKST", startOfWorkweek.map { [$0] } ?? [])
         ]
+        return groupedProperties.flatMap { (key, values) in (values ?? []).map { (key, $0) } }
     }
 
     public var iCalendarEncoded: String {
