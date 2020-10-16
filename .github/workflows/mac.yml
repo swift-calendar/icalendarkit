@@ -12,3 +12,12 @@ jobs:
       run: swift build
     - name: Test
       run: swift test
+    - name: Generate Docs
+      uses: sersoft-gmbh/swifty-docs-action@v1
+      with:
+        output: public
+    - name: Deploy Docs
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
