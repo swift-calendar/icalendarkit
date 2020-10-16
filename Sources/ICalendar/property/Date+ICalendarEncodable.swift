@@ -1,9 +1,9 @@
 import Foundation
 
-public extension Date: ICalendarEncodable {
-    var iCalendarEncoded: String {
+extension Date: ICalendarEncodable {
+    public var iCalendarEncoded: String {
         let formatter = DateFormatter()
-        formatter.format = "yyyyMMdd'T'HHmmss'Z'"
-        formatter.string(from: self)
+        formatter.dateFormat = "yyyyMMdd'T'HHmmss'Z'"
+        return formatter.string(from: self)
     }
 }

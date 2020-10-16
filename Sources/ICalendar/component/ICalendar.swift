@@ -15,7 +15,7 @@ public struct ICalendar: ICalendarComponent {
     /// object.
     ///
     /// See https://tools.ietf.org/html/rfc5545#section-3.7.3
-    public let prodid = "-//swift-icalendar//swift-icalendar//EN"
+    public var prodid: ICalendarProductIdentifier
 
     /// The calendar scale for the calendar information specified
     /// in this iCalendar object.
@@ -40,7 +40,7 @@ public struct ICalendar: ICalendarComponent {
         [events, toDos, journals, freeBusies, timeZones, alarms].flatMap { $0 as! [ICalendarComponent] }
     }
 
-    public var properties: [(String, String?)] {
+    public var properties: [(String, ICalendarEncodable?)] {
         [
             ("VERSION", version),
             ("PRODID", prodid),
@@ -50,6 +50,7 @@ public struct ICalendar: ICalendarComponent {
     }
 
     public init(
+        prodid: ICalendarProductIdentifier = ICalendarProductIdentifier(),
         calscale: String? = "GREGORIAN",
         method: String? = nil,
         events: [ICalendarEvent] = [],
@@ -59,6 +60,7 @@ public struct ICalendar: ICalendarComponent {
         timeZones: [ICalendarTimeZone] = [],
         alarms: [ICalendarAlarm] = []
     ) {
+        self.prodid = prodid
         self.calscale = calscale
         self.method = method
         self.events = events
