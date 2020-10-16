@@ -4,11 +4,11 @@
 public struct ICalendarDuration: ICalendarEncodable {
     public var negative: Bool
     
-    public var weeks: Int?
-    public var days: Int?
-    public var hours: Int?
-    public var minutes: Int?
-    public var seconds: Int?
+    public var weeks: Int? = nil
+    public var days: Int? = nil
+    public var hours: Int? = nil
+    public var minutes: Int? = nil
+    public var seconds: Int? = nil
 
     public var iCalendarEncoded: String {
         var encodedDuration: String
@@ -20,5 +20,18 @@ public struct ICalendarDuration: ICalendarEncodable {
         }
 
         return "\(negative ? "-" : "")P\(encodedDuration)"
+    }
+
+    public init(negative: Bool = false, weeks: Int) {
+        self.negative = negative
+        self.weeks = weeks
+    }
+
+    public init(negative: Bool = false, days: Int = 0, hours: Int = 0, minutes: Int = 0, seconds: Int = 0) {
+        self.negative = negative
+        self.days = days
+        self.hours = hours
+        self.minutes = minutes
+        self.seconds = seconds
     }
 }
