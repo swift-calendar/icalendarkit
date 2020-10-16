@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ICalendarDuration Structure Reference</title>
+    <title>ICalendarContentLine Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/ICalendarDuration" class="dashAnchor"></a>
-    <a title="ICalendarDuration Structure Reference"></a>
+    <a name="//apple_ref/swift/Struct/ICalendarContentLine" class="dashAnchor"></a>
+    <a title="ICalendarContentLine Structure Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (55% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        ICalendarDuration Structure Reference
+        ICalendarContentLine Structure Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -106,17 +106,19 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>ICalendarDuration</h1>
+            <h1>ICalendarContentLine</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarDuration</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ICalendarEncodable.html">ICalendarEncodable</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarContentLine</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ICalendarEncodable.html">ICalendarEncodable</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Specifies a positive duration of time.</p>
+            <p>The iCalendar object is organized into individual lines of text,
+called content lines.  Content lines are delimited by a line break,
+which is a CRLF sequence (CR character followed by LF character).</p>
 
-<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.2.5">https://tools.ietf.org/html/rfc5545#section-3.8.2.5</a></p>
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.1">https://tools.ietf.org/html/rfc5545#section-3.1</a></p>
 
           </section>
           <section class="section task-group-section">
@@ -125,9 +127,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ICalendar0A8DurationV8negativeSbvp"></a>
-                    <a name="//apple_ref/swift/Property/negative" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A8DurationV8negativeSbvp">negative</a>
+                    <a name="/s:9ICalendar0A11ContentLineV3keySSvp"></a>
+                    <a name="//apple_ref/swift/Property/key" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A11ContentLineV3keySSvp">key</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -142,7 +144,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">negative</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -152,9 +154,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ICalendar0A8DurationV5weeksSiSgvp"></a>
-                    <a name="//apple_ref/swift/Property/weeks" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A8DurationV5weeksSiSgvp">weeks</a>
+                    <a name="/s:9ICalendar0A11ContentLineV6paramsSaySS_SaySSGtGvp"></a>
+                    <a name="//apple_ref/swift/Property/params" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A11ContentLineV6paramsSaySS_SaySSGtGvp">params</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -169,7 +171,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">weeks</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">params</span><span class="p">:</span> <span class="p">[(</span><span class="kt">String</span><span class="p">,</span> <span class="p">[</span><span class="kt">String</span><span class="p">])]</span></code></pre>
 
                         </div>
                       </div>
@@ -179,9 +181,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ICalendar0A8DurationV4daysSiSgvp"></a>
-                    <a name="//apple_ref/swift/Property/days" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A8DurationV4daysSiSgvp">days</a>
+                    <a name="/s:9ICalendar0A11ContentLineV5valueAA0A9Encodable_pvp"></a>
+                    <a name="//apple_ref/swift/Property/value" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A11ContentLineV5valueAA0A9Encodable_pvp">value</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -196,7 +198,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">days</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ICalendarEncodable.html">ICalendarEncodable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -206,90 +208,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ICalendar0A8DurationV5hoursSiSgvp"></a>
-                    <a name="//apple_ref/swift/Property/hours" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A8DurationV5hoursSiSgvp">hours</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hours</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ICalendar0A8DurationV7minutesSiSgvp"></a>
-                    <a name="//apple_ref/swift/Property/minutes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A8DurationV7minutesSiSgvp">minutes</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">minutes</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ICalendar0A8DurationV7secondsSiSgvp"></a>
-                    <a name="//apple_ref/swift/Property/seconds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A8DurationV7secondsSiSgvp">seconds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">seconds</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ICalendar0A8DurationV16iCalendarEncodedSSvp"></a>
+                    <a name="/s:9ICalendar0A11ContentLineV16iCalendarEncodedSSvp"></a>
                     <a name="//apple_ref/swift/Property/iCalendarEncoded" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A8DurationV16iCalendarEncodedSSvp">iCalendarEncoded</a>
+                    <a class="token" href="#/s:9ICalendar0A11ContentLineV16iCalendarEncodedSSvp">iCalendarEncoded</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -314,9 +235,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ICalendar0A8DurationV8negative5weeksACSb_Sitcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(negative:weeks:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A8DurationV8negative5weeksACSb_Sitcfc">init(negative:<wbr>weeks:<wbr>)</a>
+                    <a name="/s:9ICalendar0A11ContentLineV3key6params5valueACSgSS_SaySS_SaySSGtGAA0A9Encodable_ptcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(key:params:value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A11ContentLineV3key6params5valueACSgSS_SaySS_SaySSGtGAA0A9Encodable_ptcfc">init(key:<wbr>params:<wbr>value:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -331,7 +252,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">negative</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">weeks</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">params</span><span class="p">:</span> <span class="p">[(</span><span class="kt">String</span><span class="p">,</span> <span class="p">[</span><span class="kt">String</span><span class="p">])]</span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ICalendarEncodable.html">ICalendarEncodable</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -341,9 +262,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ICalendar0A8DurationV8negative4days5hours7minutes7secondsACSb_S4itcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(negative:days:hours:minutes:seconds:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A8DurationV8negative4days5hours7minutes7secondsACSb_S4itcfc">init(negative:<wbr>days:<wbr>hours:<wbr>minutes:<wbr>seconds:<wbr>)</a>
+                    <a name="/s:9ICalendar0A11ContentLineV4line_6params_ACSgSS_SaySS_SaySSGtGAA0A9Encodable_pSgtFZ"></a>
+                    <a name="//apple_ref/swift/Method/line(_:params:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A11ContentLineV4line_6params_ACSgSS_SaySS_SaySSGtGAA0A9Encodable_pSgtFZ">line(_:<wbr>params:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -358,7 +279,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">negative</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">days</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">hours</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">minutes</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">seconds</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">line</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">params</span><span class="p">:</span> <span class="p">[(</span><span class="kt">String</span><span class="p">,</span> <span class="p">[</span><span class="kt">String</span><span class="p">])]</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ICalendarEncodable.html">ICalendarEncodable</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">ICalendarContentLine</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>

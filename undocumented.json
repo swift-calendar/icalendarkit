@@ -66,7 +66,7 @@
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/components/ICalendarComponent.swift",
       "line": 18,
-      "symbol": "ICalendarComponent.propertiesForEncoding",
+      "symbol": "ICalendarComponent.contentLines",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -141,10 +141,59 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/extensions/String+Utilities.swift",
+      "line": 2,
+      "symbol": "String.chunks(ofLength:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/extensions/URL+ICalendarEncodable.swift",
       "line": 4,
       "symbol": "URL.iCalendarEncoded",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarContentLine.swift",
+      "line": 9,
+      "symbol": "ICalendarContentLine.key",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarContentLine.swift",
+      "line": 10,
+      "symbol": "ICalendarContentLine.params",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarContentLine.swift",
+      "line": 11,
+      "symbol": "ICalendarContentLine.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarContentLine.swift",
+      "line": 13,
+      "symbol": "ICalendarContentLine.iCalendarEncoded",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarContentLine.swift",
+      "line": 36,
+      "symbol": "ICalendarContentLine.init(key:params:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarContentLine.swift",
+      "line": 42,
+      "symbol": "ICalendarContentLine.line(_:params:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
