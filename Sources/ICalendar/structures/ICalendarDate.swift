@@ -20,4 +20,12 @@ public struct ICalendarDate: ICalendarPropertyEncodable {
         self.date = date
         self.ignoreTime = ignoreTime
     }
+
+    public static func dateOnly(_ date: Date) -> ICalendarDate {
+        ICalendarDate(date: date, ignoreTime: true)
+    }
+
+    public static func dateTime(_ date: Date) -> ICalendarDate {
+        ICalendarDate(date: date, ignoreTime: false)
+    }
 }

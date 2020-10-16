@@ -39,9 +39,9 @@ final class ICalendarTests: XCTestCase {
             uid: uid,
             created: dates[1].date,
             description: description,
-            dtstart: ICalendarDate(date: dates[2].date),
+            dtstart: .dateTime(dates[2].date),
             lastModified: dates[3].date,
-            dtend: ICalendarDate(date: dates[4].date, ignoreTime: true)
+            dtend: .dateOnly(dates[4].date)
         ))
 
         XCTAssertEqual(cal.iCalendarEncoded, [

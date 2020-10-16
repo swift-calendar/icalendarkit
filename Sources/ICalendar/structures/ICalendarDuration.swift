@@ -3,6 +3,8 @@
 /// See https://tools.ietf.org/html/rfc5545#section-3.8.2.5
 public struct ICalendarDuration: ICalendarPropertyEncodable {
     public var sign: Bool
+
+    // TODO: Use simpler internal representation, e.g. just seconds
     
     public var weeks: Int? = nil
     public var days: Int? = nil
@@ -33,5 +35,25 @@ public struct ICalendarDuration: ICalendarPropertyEncodable {
         self.hours = hours
         self.minutes = minutes
         self.seconds = seconds
+    }
+
+    public static func weeks(_ weeks: Int) -> ICalendarDuration {
+        ICalendarDuration(weeks: weeks)
+    }
+
+    public static func days(_ days: Int) -> ICalendarDuration {
+        ICalendarDuration(days: days)
+    }
+
+    public static func hours(_ hours: Int) -> ICalendarDuration {
+        ICalendarDuration(hours: hours)
+    }
+
+    public static func minutes(_ minutes: Int) -> ICalendarDuration {
+        ICalendarDuration(minutes: minutes)
+    }
+    
+    public static func seconds(_ seconds: Int) -> ICalendarDuration {
+        ICalendarDuration(seconds: seconds)
     }
 }
