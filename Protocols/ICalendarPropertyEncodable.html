@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ICalendarAlarm Structure Reference</title>
+    <title>ICalendarPropertyEncodable Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/ICalendarAlarm" class="dashAnchor"></a>
-    <a title="ICalendarAlarm Structure Reference"></a>
+    <a name="//apple_ref/swift/Protocol/ICalendarPropertyEncodable" class="dashAnchor"></a>
+    <a title="ICalendarPropertyEncodable Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (61% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        ICalendarAlarm Structure Reference
+        ICalendarPropertyEncodable Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -112,15 +112,17 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>ICalendarAlarm</h1>
+            <h1>ICalendarPropertyEncodable</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarAlarm</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ICalendarComponent.html">ICalendarComponent</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ICalendarPropertyEncodable</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ICalendarEncodable.html">ICalendarEncodable</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Represents something that can be encoded in
+the iCalendar format, but may require additional
+parameters in the content line.</p>
 
           </section>
           <section class="section task-group-section">
@@ -129,23 +131,32 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ICalendar0A9ComponentP9componentSSvp"></a>
-                    <a name="//apple_ref/swift/Property/component" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A9ComponentP9componentSSvp">component</a>
+                    <a name="/s:9ICalendar0A17PropertyEncodableP10parametersSaySS_SaySSGtGvp"></a>
+                    <a name="//apple_ref/swift/Property/parameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A17PropertyEncodableP10parametersSaySS_SaySSGtGvp">parameters</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[(</span><span class="kt">String</span><span class="p">,</span> <span class="p">[</span><span class="kt">String</span><span class="p">])]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>

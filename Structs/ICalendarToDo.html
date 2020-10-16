@@ -17,7 +17,7 @@
     <a title="ICalendarToDo Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (55% documented)</p>
+        <p><a href="../index.html"> Docs</a> (61% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -61,6 +61,9 @@
               <li class="nav-group-task">
                 <a href="../Protocols/ICalendarEncodable.html">ICalendarEncodable</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -74,6 +77,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/ICalendarContentLine.html">ICalendarContentLine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarDate.html">ICalendarDate</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/ICalendarDuration.html">ICalendarDuration</a>
@@ -114,7 +120,10 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Provide a grouping of calendar properties that describe a
+to-do.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.6.2">https://tools.ietf.org/html/rfc5545#section-3.6.2</a></p>
 
           </section>
           <section class="section task-group-section">
@@ -140,6 +149,779 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV7dtstamp10Foundation4DateVvp"></a>
+                    <a name="//apple_ref/swift/Property/dtstamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV7dtstamp10Foundation4DateVvp">dtstamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>In the case of an iCalendar object that specifies a
+&ldquo;METHOD&rdquo; property, this property specifies the date and time that
+the instance of the iCalendar object was created.  In the case of
+an iCalendar object that doesn&rsquo;t specify a &ldquo;METHOD&rdquo; property, this
+property specifies the date and time that the information
+associated with the calendar component was last revised in the
+calendar store.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.7.2">https://tools.ietf.org/html/rfc5545#section-3.8.7.2</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dtstamp</span><span class="p">:</span> <span class="kt">Date</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV3uidSSvp"></a>
+                    <a name="//apple_ref/swift/Property/uid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV3uidSSvp">uid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property defines the persistent, globally unique
+identifier for the calendar component.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.4.7">https://tools.ietf.org/html/rfc5545#section-3.8.4.7</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">uid</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV14classificationSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/classification" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV14classificationSSSgvp">classification</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property defines the access classification for a
+calendar component.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.1.3">https://tools.ietf.org/html/rfc5545#section-3.8.1.3</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">classification</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV7created10Foundation4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/created" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV7created10Foundation4DateVSgvp">created</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property specifies the date and time that the calendar
+information was created by the calendar user agent in the calendar
+store.</p>
+
+<p>Note: This is analogous to the creation date and time for a
+file in the file system.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.7.1">https://tools.ietf.org/html/rfc5545#section-3.8.7.1</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">created</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV9completed10Foundation4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/completed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV9completed10Foundation4DateVSgvp">completed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property defines the date and time that a to-do was
+actually completed.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.2.1">https://tools.ietf.org/html/rfc5545#section-3.8.2.1</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">completed</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV11descriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV11descriptionSSSgvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property specifies when the calendar component begins.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.2.4">https://tools.ietf.org/html/rfc5545#section-3.8.2.4</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV7dtstartAA0A4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dtstart" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV7dtstartAA0A4DateVSgvp">dtstart</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property specifies when the calendar component begins.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.2.4">https://tools.ietf.org/html/rfc5545#section-3.8.2.4</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dtstart</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDate.html">ICalendarDate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV3geoAA0A18GeographicPositionVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/geo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV3geoAA0A18GeographicPositionVSgvp">geo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property specifi9es information related to the global
+position for the activity specified by a calendar component.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.1.6">https://tools.ietf.org/html/rfc5545#section-3.8.1.6</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">geo</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarGeographicPosition.html">ICalendarGeographicPosition</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV12lastModified10Foundation4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lastModified" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV12lastModified10Foundation4DateVSgvp">lastModified</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property specifies the date and time that the
+information associated with the calendar component was last
+revised in the calendar store.</p>
+
+<p>Note: This is analogous to the modification date and time for a
+file in the file system.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.7.3">https://tools.ietf.org/html/rfc5545#section-3.8.7.3</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lastModified</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV8locationSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/location" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV8locationSSSgvp">location</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property defines the intended venue for the activity
+for the activity.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.1.7">https://tools.ietf.org/html/rfc5545#section-3.8.1.7</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV9organizerSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/organizer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV9organizerSSSgvp">organizer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property defines the organizer for a calendar component.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.4.3">https://tools.ietf.org/html/rfc5545#section-3.8.4.3</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">organizer</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV15percentCompleteSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/percentComplete" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV15percentCompleteSiSgvp">percentComplete</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property is used by an assignee or delegatee of a
+to-do to convey the percent completion of a to-do to the
+&ldquo;Organizer&rdquo;.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.1.8">https://tools.ietf.org/html/rfc5545#section-3.8.1.8</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">percentComplete</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV8prioritySiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/priority" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV8prioritySiSgvp">priority</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property defines the relative priority for a calendar component.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.1.9">https://tools.ietf.org/html/rfc5545#section-3.8.1.9</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV3seqSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/seq" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV3seqSiSgvp">seq</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property defines the revision sequence number of the
+calendar component within a sequence of revisions.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.7.4">https://tools.ietf.org/html/rfc5545#section-3.8.7.4</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">seq</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV6statusSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV6statusSSSgvp">status</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property defines the overall status or confirmation
+for the calendar component.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.1.11">https://tools.ietf.org/html/rfc5545#section-3.8.1.11</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV7summarySSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/summary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV7summarySSSgvp">summary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property defines a short summary or subject for the
+calendar component.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.1.12">https://tools.ietf.org/html/rfc5545#section-3.8.1.12</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">summary</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV3url10Foundation3URLVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV3url10Foundation3URLVSgvp">url</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property defines a Uniform Resource Locator (URL)
+associated with the iCalendar object.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.4.6">https://tools.ietf.org/html/rfc5545#section-3.8.4.6</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV12recurrenceId10Foundation4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/recurrenceId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV12recurrenceId10Foundation4DateVSgvp">recurrenceId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property is used in conjunction with the &ldquo;UID&rdquo; and
+&ldquo;SEQUENCE&rdquo; properties to identify a specific instance of a
+recurring &ldquo;VEVENT&rdquo;, &ldquo;VTODO&rdquo;, or &ldquo;VJOURNAL&rdquo; calendar component.
+The property value is the original value of the &ldquo;DTSTART&rdquo; property
+of the recurrence instance.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.4.4">https://tools.ietf.org/html/rfc5545#section-3.8.4.4</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">recurrenceId</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV5rruleSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/rrule" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV5rruleSSSgvp">rrule</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property defines a rule or repeating pattern for
+recurring events, to-dos, journal entries, or time zone
+definitions.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.5.3">https://tools.ietf.org/html/rfc5545#section-3.8.5.3</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rrule</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV3dueAA0A4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/due" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV3dueAA0A4DateVSgvp">due</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property specifies the date and time that a calendar
+component ends.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.2.2">https://tools.ietf.org/html/rfc5545#section-3.8.2.2</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">due</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDate.html">ICalendarDate</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV8durationAA0A8DurationVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/duration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV8durationAA0A8DurationVSgvp">duration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property specifies a positive duration of time.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.2.5">https://tools.ietf.org/html/rfc5545#section-3.8.2.5</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDuration.html">ICalendarDuration</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV6alarmsSayAA0A5AlarmVGvp"></a>
+                    <a name="//apple_ref/swift/Property/alarms" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV6alarmsSayAA0A5AlarmVGvp">alarms</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">alarms</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/ICalendarAlarm.html">ICalendarAlarm</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A9ComponentP8childrenSayAaB_pGvp"></a>
+                    <a name="//apple_ref/swift/Property/children" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A9ComponentP8childrenSayAaB_pGvp">children</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">children</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ICalendarComponent.html">ICalendarComponent</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A9ComponentP10propertiesSayAA0A11ContentLineVSgGvp"></a>
+                    <a name="//apple_ref/swift/Property/properties" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A9ComponentP10propertiesSayAA0A11ContentLineVSgGvp">properties</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/ICalendarContentLine.html">ICalendarContentLine</a></span><span class="p">?]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A4ToDoV7dtstamp3uid14classification7created9completed11description7dtstart3geo12lastModified8location9organizer15percentComplete8priority3seq6status7summary6transp3url12recurrenceId5rrule3due8duration6alarmsAC10Foundation4DateV_S2SSgA1_SgA3_A2_AA0A4DateVSgAA0A18GeographicPositionVSgA3_A2_A2_SiSgA10_A10_A2_A2_A2_A_3URLVSgA3_A2_A6_AA0A8DurationVSgSayAA0A5AlarmVGtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(dtstamp:uid:classification:created:completed:description:dtstart:geo:lastModified:location:organizer:percentComplete:priority:seq:status:summary:transp:url:recurrenceId:rrule:due:duration:alarms:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4ToDoV7dtstamp3uid14classification7created9completed11description7dtstart3geo12lastModified8location9organizer15percentComplete8priority3seq6status7summary6transp3url12recurrenceId5rrule3due8duration6alarmsAC10Foundation4DateV_S2SSgA1_SgA3_A2_AA0A4DateVSgAA0A18GeographicPositionVSgA3_A2_A2_SiSgA10_A10_A2_A2_A2_A_3URLVSgA3_A2_A6_AA0A8DurationVSgSayAA0A5AlarmVGtcfc">init(dtstamp:<wbr>uid:<wbr>classification:<wbr>created:<wbr>completed:<wbr>description:<wbr>dtstart:<wbr>geo:<wbr>lastModified:<wbr>location:<wbr>organizer:<wbr>percentComplete:<wbr>priority:<wbr>seq:<wbr>status:<wbr>summary:<wbr>transp:<wbr>url:<wbr>recurrenceId:<wbr>rrule:<wbr>due:<wbr>duration:<wbr>alarms:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">dtstamp</span><span class="p">:</span> <span class="kt">Date</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">(),</span>
+    <span class="nv">uid</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">UUID</span><span class="p">()</span><span class="o">.</span><span class="n">uuidString</span><span class="p">,</span>
+    <span class="nv">classification</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">created</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">(),</span>
+    <span class="nv">completed</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">dtstart</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDate.html">ICalendarDate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">geo</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarGeographicPosition.html">ICalendarGeographicPosition</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">lastModified</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">(),</span>
+    <span class="nv">location</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">organizer</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">percentComplete</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">priority</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">seq</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">status</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">summary</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">transp</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">recurrenceId</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">rrule</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">due</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDate.html">ICalendarDate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDuration.html">ICalendarDuration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">alarms</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/ICalendarAlarm.html">ICalendarAlarm</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="p">)</span></code></pre>
 
                         </div>
                       </div>

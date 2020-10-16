@@ -8,6 +8,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/ICalendarPropertyEncodable.swift",
+      "line": 5,
+      "symbol": "ICalendarPropertyEncodable.parameters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/ICalendarPropertyEncodable.swift",
+      "line": 9,
+      "symbol": "ICalendarPropertyEncodable.parameters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/components/ICalendar.swift",
       "line": 32,
       "symbol": "ICalendar.events",
@@ -114,27 +128,34 @@
     },
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/components/ICalendarToDo.swift",
-      "line": 1,
-      "symbol": "ICalendarToDo",
-      "symbol_kind": "source.lang.swift.decl.struct",
+      "line": 149,
+      "symbol": "ICalendarToDo.alarms",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/extensions/Date+ICalendarEncodable.swift",
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/components/ICalendarToDo.swift",
+      "line": 178,
+      "symbol": "ICalendarToDo.init(dtstamp:uid:classification:created:completed:description:dtstart:geo:lastModified:location:organizer:percentComplete:priority:seq:status:summary:transp:url:recurrenceId:rrule:due:duration:alarms:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/extensions/Date+ICalendarPropertyEncodable.swift",
       "line": 4,
       "symbol": "Date.iCalendarEncoded",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/extensions/Int+ICalendarEncodable.swift",
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/extensions/Int+ICalendarPropertyEncodable.swift",
       "line": 2,
       "symbol": "Int.iCalendarEncoded",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/extensions/String+ICalendarEncodable.swift",
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/extensions/String+ICalendarPropertyEncodable.swift",
       "line": 2,
       "symbol": "String.iCalendarEncoded",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -148,7 +169,7 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/extensions/URL+ICalendarEncodable.swift",
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/extensions/URL+ICalendarPropertyEncodable.swift",
       "line": 4,
       "symbol": "URL.iCalendarEncoded",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -164,20 +185,13 @@
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarContentLine.swift",
       "line": 10,
-      "symbol": "ICalendarContentLine.params",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarContentLine.swift",
-      "line": 11,
       "symbol": "ICalendarContentLine.value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarContentLine.swift",
-      "line": 13,
+      "line": 12,
       "symbol": "ICalendarContentLine.iCalendarEncoded",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -185,15 +199,50 @@
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarContentLine.swift",
       "line": 36,
-      "symbol": "ICalendarContentLine.init(key:params:value:)",
+      "symbol": "ICalendarContentLine.init(key:value:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarContentLine.swift",
-      "line": 42,
-      "symbol": "ICalendarContentLine.line(_:params:_:)",
+      "line": 41,
+      "symbol": "ICalendarContentLine.line(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDate.swift",
+      "line": 6,
+      "symbol": "ICalendarDate.date",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDate.swift",
+      "line": 7,
+      "symbol": "ICalendarDate.ignoreTime",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDate.swift",
+      "line": 9,
+      "symbol": "ICalendarDate.iCalendarEncoded",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDate.swift",
+      "line": 15,
+      "symbol": "ICalendarDate.parameters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDate.swift",
+      "line": 19,
+      "symbol": "ICalendarDate.init(date:ignoreTime:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -276,15 +325,15 @@
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarGeographicPosition.swift",
       "line": 9,
-      "symbol": "ICalendarGeographicPosition.init(latitude:longitude:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "symbol": "ICalendarGeographicPosition.iCalendarEncoded",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarGeographicPosition.swift",
-      "line": 14,
-      "symbol": "ICalendarGeographicPosition.iCalendarEncoded",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "line": 13,
+      "symbol": "ICalendarGeographicPosition.init(latitude:longitude:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {

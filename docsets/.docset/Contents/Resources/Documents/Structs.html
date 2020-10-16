@@ -17,7 +17,7 @@
     <a title="Structures  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (55% documented)</p>
+        <p><a href="index.html"> Docs</a> (61% documented)</p>
         <p class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -61,6 +61,9 @@
               <li class="nav-group-task">
                 <a href="Protocols/ICalendarEncodable.html">ICalendarEncodable</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -74,6 +77,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/ICalendarContentLine.html">ICalendarContentLine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ICalendarDate.html">ICalendarDate</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/ICalendarDuration.html">ICalendarDuration</a>
@@ -299,7 +305,10 @@ describes an event.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provide a grouping of calendar properties that describe a
+to-do.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.6.2">https://tools.ietf.org/html/rfc5545#section-3.6.2</a></p>
 
                         <a href="Structs/ICalendarToDo.html" class="slightly-smaller">See more</a>
                       </div>
@@ -349,6 +358,35 @@ which is a CRLF sequence (CR character followed by LF character).</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:9ICalendar0A4DateV"></a>
+                    <a name="//apple_ref/swift/Struct/ICalendarDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A4DateV">ICalendarDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A date or date/time for use in calendar
+events, todos or free/busy-components.</p>
+
+                        <a href="Structs/ICalendarDate.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarDate</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:9ICalendar0A8DurationV"></a>
                     <a name="//apple_ref/swift/Struct/ICalendarDuration" class="dashAnchor"></a>
                     <a class="token" href="#/s:9ICalendar0A8DurationV">ICalendarDuration</a>
@@ -369,7 +407,7 @@ which is a CRLF sequence (CR character followed by LF character).</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarDuration</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarEncodable.html">ICalendarEncodable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarDuration</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -400,7 +438,7 @@ the activity specified by a calendar component.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarGeographicPosition</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarEncodable.html">ICalendarEncodable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarGeographicPosition</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -431,7 +469,7 @@ iCalendar object.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarProductIdentifier</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarEncodable.html">ICalendarEncodable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarProductIdentifier</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a></span></code></pre>
 
                         </div>
                       </div>
