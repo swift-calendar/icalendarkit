@@ -124,7 +124,7 @@ public struct ICalendarEvent: ICalendarComponent {
     /// This property specifies a positive duration of time.
     ///
     /// See https://tools.ietf.org/html/rfc5545#section-3.8.2.5
-    public var duration: TimeInterval? {
+    public var duration: ICalendarDuration? {
         willSet { dtend = nil }
     }
 
@@ -141,6 +141,29 @@ public struct ICalendarEvent: ICalendarComponent {
 
     public var alarms: [ICalendarAlarm]
     public var children: [ICalendarComponent] { alarms }
+
+    public var properties: [(String, ICalendarEncodable?)] {
+        [
+            ("DTSTAMP", dtstamp),
+            ("UID", uid),
+            ("CLASS", classification),
+            ("CREATED", created),
+            ("DESCRIPTION", description),
+            ("GEO", geo),
+            ("LAST-MODIFIED", lastModified),
+            ("LOCATION", location),
+            ("ORGANIZER", organizer),
+            ("PRIORITY", seq),
+            ("STATUS", status),
+            ("SUMMARY", summary),
+            ("TRANSP", transp),
+            ("URL", url),
+            ("RECURRENCE-ID", recurrenceId),
+            ("RRULE", rrule),
+            ("DTEND", dtend),
+            ("DURATION", duration)
+        ]
+    }
 
     public init(
         dtstamp: Date,
@@ -162,7 +185,7 @@ public struct ICalendarEvent: ICalendarComponent {
         recurrenceId: Date? = nil,
         rrule: String? = nil,
         dtend: Date? = nil,
-        duration: TimeInterval? = nil,
+        duration: ICalendarDuration? = nil,
         alarms: [ICalendarAlarm] = []
     ) {
         self.dtstamp = dtstamp
