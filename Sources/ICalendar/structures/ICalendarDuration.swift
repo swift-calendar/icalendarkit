@@ -2,7 +2,7 @@
 ///
 /// See https://tools.ietf.org/html/rfc5545#section-3.8.2.5
 public struct ICalendarDuration: ICalendarPropertyEncodable {
-    public var negative: Bool
+    public var sign: Bool
     
     public var weeks: Int? = nil
     public var days: Int? = nil
@@ -19,16 +19,16 @@ public struct ICalendarDuration: ICalendarPropertyEncodable {
             encodedDuration = "\(days ?? 0)DT\(hours ?? 0)H\(minutes ?? 0)M\(seconds ?? 0)S"
         }
 
-        return "\(negative ? "-" : "")P\(encodedDuration)"
+        return "\(sign ? "" : "-")P\(encodedDuration)"
     }
 
-    public init(negative: Bool = false, weeks: Int) {
-        self.negative = negative
+    public init(sign: Bool = true, weeks: Int) {
+        self.sign = sign
         self.weeks = weeks
     }
 
-    public init(negative: Bool = false, days: Int = 0, hours: Int = 0, minutes: Int = 0, seconds: Int = 0) {
-        self.negative = negative
+    public init(sign: Bool = true, days: Int = 0, hours: Int = 0, minutes: Int = 0, seconds: Int = 0) {
+        self.sign = sign
         self.days = days
         self.hours = hours
         self.minutes = minutes
