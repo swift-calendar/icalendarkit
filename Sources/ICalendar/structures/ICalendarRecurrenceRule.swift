@@ -120,22 +120,30 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
     }
 
     public struct Day: ICalendarEncodable {
-        /// The week of the day. May be negative.
-        public let weekOfYear: Int?
+        /// The week. May be negative.
+        public let week: Int?
         /// The day of the week.
         public let dayOfWeek: DayOfWeek
 
-        public var iCalendarEncoded: String { "\(weekOfYear.map(String.init) ?? "")\(dayOfWeek.iCalendarEncoded)" }
+        public var iCalendarEncoded: String { "\(week.map(String.init) ?? "")\(dayOfWeek.iCalendarEncoded)" }
 
-        public init(weekOfYear: Int? = nil, dayOfWeek: DayOfWeek) {
-            self.weekOfYear = weekOfYear
+        public init(week: Int? = nil, dayOfWeek: DayOfWeek) {
+            self.week = week
             self.dayOfWeek = dayOfWeek
 
-            assert(weekOfYear.map { (1...53).contains(abs($0)) } ?? true, "Week-of-year \(weekOfYear.map(String.init) ?? "?") is not between 1 and 53 or -53 and -1 (each inclusive)")
+            assert(week.map { (1...53).contains(abs($0)) } ?? true, "Week-of-year \(week.map(String.init) ?? "?") is not between 1 and 53 or -53 and -1 (each inclusive)")
         }
 
-        public static func dayOfWeek(_ dayOfWeek: DayOfWeek) -> Self {
+        public static func every(_ dayOfWeek: DayOfWeek) -> Self {
             Self(dayOfWeek: dayOfWeek)
+        }
+
+        public static func first(_ dayOfWeek: DayOfWeek) -> Self {
+            Self(week: 1, dayOfWeek: dayOfWeek)
+        }
+
+        public static func last(_ dayOfWeek: DayOfWeek) -> Self {
+            Self(week: -1, dayOfWeek: dayOfWeek)
         }
     }
 
