@@ -14,8 +14,10 @@ final class ICalendarTests: XCTestCase {
         let day = 1
         let hour = 0
         let minute = 0
-        let second = 0
-        let date = Calendar(identifier: .gregorian).date(from: DateComponents(year: year, month: month, day: day, hour: hour, minute: minute, second: second))!
+        let second = 1
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+        let date = calendar.date(from: DateComponents(year: year, month: month, day: day, hour: hour, minute: minute, second: second))!
         let description = "Test"
         let uid = "test"
 
@@ -28,7 +30,7 @@ final class ICalendarTests: XCTestCase {
             lastModified: date
         ))
 
-        let encodedDate = String(format: "%04d%02d%02dT%02d%02d%02d", year, month, day, hour, minute, second)
+        let encodedDate = String(format: "%04d%02d%02dT%02d%02d%02dZ", year, month, day, hour, minute, second)
         XCTAssertEqual(cal.iCalendarEncoded, [
             "BEGIN:VCALENDAR",
             "VERSION:2.0",
