@@ -1,7 +1,7 @@
 /// Specifies a positive duration of time.
 ///
 /// See https://tools.ietf.org/html/rfc5545#section-3.8.2.5
-public struct ICalendarDuration: ICalendarEncodable {
+public struct ICalendarDuration: ICalendarPropertyEncodable {
     public var negative: Bool
     
     public var weeks: Int? = nil

@@ -2,7 +2,7 @@
 /// the activity specified by a calendar component.
 ///
 /// See https://tools.ietf.org/html/rfc5545#section-3.8.1.6
-public struct ICalendarGeographicPosition: ICalendarEncodable {
+public struct ICalendarGeographicPosition: ICalendarPropertyEncodable {
     public let latitude: Double
     public let longitude: Double
 

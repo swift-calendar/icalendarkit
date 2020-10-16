@@ -1,6 +1,6 @@
 import Foundation
 
-extension URL: ICalendarEncodable {
+extension URL: ICalendarPropertyEncodable {
     public var iCalendarEncoded: String {
         absoluteString
     }
