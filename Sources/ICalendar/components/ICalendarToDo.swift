@@ -116,7 +116,7 @@ public struct ICalendarToDo: ICalendarComponent {
     /// definitions.
     ///
     /// See https://tools.ietf.org/html/rfc5545#section-3.8.5.3
-    public var rrule: String? // TODO: Add more structure
+    public var rrule: ICalendarRecurrenceRule?
 
     // Mutually exclusive specifications of end date
 
@@ -200,7 +200,7 @@ public struct ICalendarToDo: ICalendarComponent {
         transp: String? = nil,
         url: URL? = nil,
         recurrenceId: Date? = nil,
-        rrule: String? = nil,
+        rrule: ICalendarRecurrenceRule? = nil,
         due: ICalendarDate? = nil,
         duration: ICalendarDuration? = nil,
         alarms: [ICalendarAlarm] = []
