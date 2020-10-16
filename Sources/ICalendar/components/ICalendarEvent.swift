@@ -211,5 +211,7 @@ public struct ICalendarEvent: ICalendarComponent {
         self.dtend = dtend
         self.duration = duration
         self.alarms = alarms
+
+        assert(dtend == nil || duration == nil, "End date/time and duration must not be specified together!")
     }
 }

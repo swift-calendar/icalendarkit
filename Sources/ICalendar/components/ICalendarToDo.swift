@@ -222,5 +222,7 @@ public struct ICalendarToDo: ICalendarComponent {
         self.due = due
         self.duration = duration
         self.alarms = alarms
+
+        assert(due == nil || duration == nil, "Due date/time and duration must not be specified together!")
     }
 }
