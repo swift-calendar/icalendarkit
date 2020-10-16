@@ -39,12 +39,12 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
     /// At which days of the month it should occur. Specifies a COMMA-separated
     /// list of days of the month. Valid values are 1 to 31 or -31 to -1.
     public var byDayOfMonth: [Int]? {
-        didSet { assert(byDaysOfYear?.allSatisfy { (1...31).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 31 or -31 and -1: \(byDayOfMonth ?? [])") }
+        didSet { assert(byDayOfMonth?.allSatisfy { (1...31).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 31 or -31 and -1: \(byDayOfMonth ?? [])") }
     }
     /// At which days of the year it should occur. Specifies a list of days
     /// of the year.  Valid values are 1 to 366 or -366 to -1.
-    public var byDaysOfYear: [Int]? {
-        didSet { assert(byWeekOfYear?.allSatisfy { (1...366).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 366 or -366 and -1: \(byDaysOfYear ?? [])") }
+    public var byDayOfYear: [Int]? {
+        didSet { assert(byDayOfYear?.allSatisfy { (1...366).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 366 or -366 and -1: \(byDayOfYear ?? [])") }
     }
     /// At which weeks of the year it should occur. Specificies a list of
     /// ordinals specifying weeks of the year. Valid values are 1 to 53 or -53 to
@@ -83,7 +83,7 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
             ("BYHOUR", byHour),
             ("BYDAY", byDay),
             ("BYMONTHDAY", byDayOfMonth),
-            ("BYYEARDAY", byDaysOfYear),
+            ("BYYEARDAY", byDayOfYear),
             ("BYWEEKNO", byWeekOfYear),
             ("BYMONTH", byMonth),
             ("BYSETPOS", bySetPos),
@@ -157,6 +157,7 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
         byHour: [Int]? = nil,
         byDay: [Day]? = nil,
         byDayOfMonth: [Int]? = nil,
+        byDayOfYear: [Int]? = nil,
         byWeekOfYear: [Int]? = nil,
         byMonth: [Int]? = nil,
         bySetPos: [Int]? = nil,
@@ -171,6 +172,7 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
         self.byHour = byHour
         self.byDay = byDay
         self.byDayOfMonth = byDayOfMonth
+        self.byDayOfYear = byDayOfYear
         self.byWeekOfYear = byWeekOfYear
         self.byMonth = byMonth
         self.bySetPos = bySetPos

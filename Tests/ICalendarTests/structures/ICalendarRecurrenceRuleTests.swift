@@ -31,6 +31,16 @@ final class ICalendarRecurrenceRuleTests: XCTestCase {
         XCTAssertEqual(ICalendarRecurrenceRule(frequency: .weekly, interval: 2, until: .dateTime(date(1997, 12, 24)), byDay: [.every(.monday), .every(.wednesday), .every(.friday)], startOfWorkweek: .monday).iCalendarEncoded, "FREQ=WEEKLY;INTERVAL=2;UNTIL=19971224T000000Z;BYDAY=MO,WE,FR;WKST=MO")
         // Every other month of the first and last sunday of the month for 10 occurrences
         XCTAssertEqual(ICalendarRecurrenceRule(frequency: .monthly, interval: 2, count: 10, byDay: [.first(.sunday), .last(.sunday)]).iCalendarEncoded, "FREQ=MONTHLY;INTERVAL=2;COUNT=10;BYDAY=1SU,-1SU")
+        // Monthly on the third-to-the-last day of the month, forever
+        XCTAssertEqual(ICalendarRecurrenceRule(frequency: .monthly, byDayOfMonth: [-3]).iCalendarEncoded, "FREQ=MONTHLY;BYMONTHDAY=-3")
+        // Monthly on the 2nd and 15th of the month for 10 occurrences
+        XCTAssertEqual(ICalendarRecurrenceRule(frequency: .monthly, byDayOfMonth: [2, 15]).iCalendarEncoded, "FREQ=MONTHLY;BYMONTHDAY=2,15")
+        // Yearly in June and July for 10 occurrences
+        XCTAssertEqual(ICalendarRecurrenceRule(frequency: .yearly, byMonth: [6, 7]).iCalendarEncoded, "FREQ=YEARLY;BYMONTH=6,7")
+        // Every third year on the 1st, 100th and 200th day for 10 occurrences
+        XCTAssertEqual(ICalendarRecurrenceRule(frequency: .yearly, interval: 3, byDayOfYear: [1, 100, 200]).iCalendarEncoded, "FREQ=YEARLY;INTERVAL=3;BYYEARDAY=1,100,200")
+        // Every 20th monday of the year, forever
+        XCTAssertEqual(ICalendarRecurrenceRule(frequency: .yearly, byDay: [.init(week: 20, dayOfWeek: .monday)]).iCalendarEncoded, "FREQ=YEARLY;BYDAY=20MO")
     }
 
     private func date(_ year: Int, _ month: Int, _ day: Int) -> Date {
