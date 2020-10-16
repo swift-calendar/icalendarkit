@@ -8,6 +8,7 @@ final class StringUtilitiesTests: XCTestCase {
     ]
 
     func testChunks() throws {
+        XCTAssertEqual("".chunks(ofLength: 1), [""])
         XCTAssertEqual("test".chunks(ofLength: 1), "test".map { String($0) })
         XCTAssertEqual("test".chunks(ofLength: 2), ["te", "st"])
         XCTAssertEqual("test".chunks(ofLength: 3), ["tes", "t"])

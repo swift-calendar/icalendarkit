@@ -2,6 +2,8 @@ public extension String {
     func chunks(ofLength length: Int) -> [String] {
         assert(length > 0, "Can only chunk string into non-empty slices.")
 
+        guard !isEmpty else { return [""] }
+
         var chunks = [String]()
         var i = startIndex
         var remaining = count
