@@ -25,6 +25,8 @@ final class ICalendarRecurrenceRuleTests: XCTestCase {
         XCTAssertEqual(ICalendarRecurrenceRule(frequency: .daily, interval: 10, count: 5).iCalendarEncoded, "FREQ=DAILY;INTERVAL=10;COUNT=5")
         // Every day in January, until January 31, 2000
         XCTAssertEqual(ICalendarRecurrenceRule(frequency: .yearly, until: .dateOnly(date(2000, 1, 31))).iCalendarEncoded, "FREQ=YEARLY;UNTIL=20000131")
+        // Weekly on tuesday and thursday for 5 weeks
+        XCTAssertEqual(ICalendarRecurrenceRule(frequency: .weekly, count: 10, byDay: [.dayOfWeek(.tuesday), .dayOfWeek(.thursday)]).iCalendarEncoded, "FREQ=WEEKLY;COUNT=10;BYDAY=TU,TH")
     }
 
     private func date(_ year: Int, _ month: Int, _ day: Int) -> Date {

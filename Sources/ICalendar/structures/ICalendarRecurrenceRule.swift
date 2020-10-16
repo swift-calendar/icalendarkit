@@ -21,41 +21,41 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
 
     /// At which seconds of the minute it should occur.
     /// Must be between 0 and 60 (inclusive).
-    public var bySeconds: [Int]? {
-        didSet { assert(bySeconds?.allSatisfy { (0...60).contains($0) } ?? true, "by-second rules must be between 0 and 60 (inclusive): \(bySeconds ?? [])") }
+    public var bySecond: [Int]? {
+        didSet { assert(bySecond?.allSatisfy { (0...60).contains($0) } ?? true, "by-second rules must be between 0 and 60 (inclusive): \(bySecond ?? [])") }
     }
     /// At which minutes of the hour it should occur.
     /// Must be between 0 and 60 (exclusive).
-    public var byMinutes: [Int]? {
-        didSet { assert(byMinutes?.allSatisfy { (0..<60).contains($0) } ?? true, "by-hour rules must be between 0 and 60 (exclusive): \(byMinutes ?? [])") }
+    public var byMinute: [Int]? {
+        didSet { assert(byMinute?.allSatisfy { (0..<60).contains($0) } ?? true, "by-hour rules must be between 0 and 60 (exclusive): \(byMinute ?? [])") }
     }
     /// At which hours of the day it should occur.
     /// Must be between 0 and 24 (exclusive).
-    public var byHours: [Int]? {
-        didSet { assert(byHours?.allSatisfy { (0..<24).contains($0) } ?? true, "by-hour rules must be between 0 and 24 (exclusive): \(byHours ?? [])") }
+    public var byHour: [Int]? {
+        didSet { assert(byHour?.allSatisfy { (0..<24).contains($0) } ?? true, "by-hour rules must be between 0 and 24 (exclusive): \(byHour ?? [])") }
     }
     /// At which days (of the week/year) it should occur.
-    public var byDays: [Day]?
+    public var byDay: [Day]?
     /// At which days of the month it should occur. Specifies a COMMA-separated
     /// list of days of the month. Valid values are 1 to 31 or -31 to -1.
-    public var byDaysOfMonth: [Int]? {
-        didSet { assert(byDaysOfYear?.allSatisfy { (1...31).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 31 or -31 and -1: \(byDaysOfMonth ?? [])") }
+    public var byDayOfMonth: [Int]? {
+        didSet { assert(byDaysOfYear?.allSatisfy { (1...31).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 31 or -31 and -1: \(byDayOfMonth ?? [])") }
     }
     /// At which days of the year it should occur. Specifies a list of days
     /// of the year.  Valid values are 1 to 366 or -366 to -1.
     public var byDaysOfYear: [Int]? {
-        didSet { assert(byWeeksOfYear?.allSatisfy { (1...366).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 366 or -366 and -1: \(byDaysOfYear ?? [])") }
+        didSet { assert(byWeekOfYear?.allSatisfy { (1...366).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 366 or -366 and -1: \(byDaysOfYear ?? [])") }
     }
     /// At which weeks of the year it should occur. Specificies a list of
     /// ordinals specifying weeks of the year. Valid values are 1 to 53 or -53 to
     /// -1.
-    public var byWeeksOfYear: [Int]? {
-        didSet { assert(byWeeksOfYear?.allSatisfy { (1...53).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 53 or -53 and -1: \(byWeeksOfYear ?? [])") }
+    public var byWeekOfYear: [Int]? {
+        didSet { assert(byWeekOfYear?.allSatisfy { (1...53).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 53 or -53 and -1: \(byWeekOfYear ?? [])") }
     }
     /// At which months it should occur.
     /// Must be between 1 and 12 (inclusive).
-    public var byMonths: [Int]? {
-        didSet { assert(byMonths?.allSatisfy { (1...12).contains($0) } ?? true, "by-month-of-year rules must be between 1 and 12: \(byMonths ?? [])") }
+    public var byMonth: [Int]? {
+        didSet { assert(byMonth?.allSatisfy { (1...12).contains($0) } ?? true, "by-month-of-year rules must be between 1 and 12: \(byMonth ?? [])") }
     }
     /// Specifies a list of values that corresponds to the nth occurrence within
     /// the set of recurrence instances specified by the rule. By-set-pos
@@ -72,28 +72,27 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
     /// Monday by default.
     public var startOfWorkweek: DayOfWeek?
 
-    private var properties: [(String, ICalendarEncodable?)] {
-        let groupedProperties: [(String, [ICalendarEncodable]?)] = [
+    private var properties: [(String, [ICalendarEncodable]?)] {
+        [
             ("FREQ", [frequency]),
-            ("INTERVAL", interval.map { [$0] } ?? []),
-            ("UNTIL", until.map { [$0] } ?? []),
-            ("COUNT", count.map { [$0] } ?? []),
-            ("BYSECOND", bySeconds),
-            ("BYMINUTE", byMinutes),
-            ("BYHOUR", byHours),
-            ("BYDAY", byDays),
-            ("BYMONTHDAY", byDaysOfMonth),
+            ("INTERVAL", interval.map { [$0] }),
+            ("UNTIL", until.map { [$0] }),
+            ("COUNT", count.map { [$0] }),
+            ("BYSECOND", bySecond),
+            ("BYMINUTE", byMinute),
+            ("BYHOUR", byHour),
+            ("BYDAY", byDay),
+            ("BYMONTHDAY", byDayOfMonth),
             ("BYYEARDAY", byDaysOfYear),
-            ("BYWEEKNO", byWeeksOfYear),
-            ("BYMONTH", byMonths),
+            ("BYWEEKNO", byWeekOfYear),
+            ("BYMONTH", byMonth),
             ("BYSETPOS", bySetPos),
-            ("WKST", startOfWorkweek.map { [$0] } ?? [])
+            ("WKST", startOfWorkweek.map { [$0] })
         ]
-        return groupedProperties.flatMap { (key, values) in (values ?? []).map { (key, $0) } }
     }
 
     public var iCalendarEncoded: String {
-        properties.compactMap { (key, value) in value.map { "\(key)=\($0.iCalendarEncoded)" } }.joined(separator: ";")
+        properties.compactMap { (key, values) in values.map { "\(key)=\($0.map(\.iCalendarEncoded).joined(separator: ","))" } }.joined(separator: ";")
     }
 
     public enum Frequency: String, ICalendarEncodable {
@@ -134,7 +133,39 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
 
             assert(weekOfYear.map { (1...53).contains(abs($0)) } ?? true, "Week-of-year \(weekOfYear.map(String.init) ?? "?") is not between 1 and 53 or -53 and -1 (each inclusive)")
         }
+
+        public static func dayOfWeek(_ dayOfWeek: DayOfWeek) -> Self {
+            Self(dayOfWeek: dayOfWeek)
+        }
     }
 
-    // TODO: Initializer
+    public init(
+        frequency: Frequency,
+        interval: Int? = nil,
+        until: ICalendarDate? = nil,
+        count: Int? = nil,
+        bySecond: [Int]? = nil,
+        byMinute: [Int]? = nil,
+        byHour: [Int]? = nil,
+        byDay: [Day]? = nil,
+        byDayOfMonth: [Int]? = nil,
+        byWeekOfYear: [Int]? = nil,
+        byMonth: [Int]? = nil,
+        bySetPos: [Int]? = nil,
+        startOfWorkweek: DayOfWeek? = nil
+    ) {
+        self.frequency = frequency
+        self.interval = interval
+        self.until = until
+        self.count = count
+        self.bySecond = bySecond
+        self.byMinute = byMinute
+        self.byHour = byHour
+        self.byDay = byDay
+        self.byDayOfMonth = byDayOfMonth
+        self.byWeekOfYear = byWeekOfYear
+        self.byMonth = byMonth
+        self.bySetPos = bySetPos
+        self.startOfWorkweek = startOfWorkweek
+    }
 }
