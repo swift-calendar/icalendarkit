@@ -31,7 +31,7 @@ public struct ICalendarDuration: ICalendarPropertyEncodable, AdditiveArithmetic 
         var encodedDuration: String
         let (weeks, days, hours, minutes, seconds) = parts
 
-        if weeks > 0 {
+        if weeks != 0 {
             encodedDuration = "\(weeks)W"
         } else {
             encodedDuration = "\(days)DT\(hours)H\(minutes)M\(seconds)S"
