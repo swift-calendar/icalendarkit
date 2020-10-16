@@ -2,7 +2,7 @@
 
 [![Linux](https://github.com/fwcd/swift-icalendar/workflows/Linux/badge.svg)](https://github.com/fwcd/swift-icalendar/actions)
 [![macOS](https://github.com/fwcd/swift-icalendar/workflows/macOS/badge.svg)](https://github.com/fwcd/swift-icalendar/actions)
-[![Docs](https://img.shields.io/badge/docs-available-lightgrey)](https://fwcd.github.io/swift-icalendar)
+[![Docs](https://github.com/fwcd/swift-icalendar/workflows/Docs/badge.svg)](https://fwcd.github.io/swift-icalendar)
 
 A lightweight iCalendar (RFC 5545, `.ics`) encoder for Swift.
 
