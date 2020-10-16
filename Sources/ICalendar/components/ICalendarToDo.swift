@@ -123,11 +123,16 @@ public struct ICalendarToDo: ICalendarComponent {
     /// This property specifies the date and time that a calendar
     /// component ends.
     ///
+    /// Must have the same 'ignoreTime'-value as tstart.
+    /// Mutually exclusive to 'duration'.
+    ///
     /// See https://tools.ietf.org/html/rfc5545#section-3.8.2.2
     public var due: ICalendarDate? {
         willSet { duration = nil }
     }
     /// This property specifies a positive duration of time.
+    ///
+    /// Mutually exclusive to 'due'.
     ///
     /// See https://tools.ietf.org/html/rfc5545#section-3.8.2.5
     public var duration: ICalendarDuration? {
