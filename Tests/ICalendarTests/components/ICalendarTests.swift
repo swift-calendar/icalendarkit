@@ -4,7 +4,7 @@ import Foundation
 
 final class ICalendarTests: XCTestCase {
     static var allTests = [
-        ("testICalendar", testICalendar)
+        ("testICalendarWithEvent", testICalendarWithEvent)
     ]
 
     /// A few dates for testing 
@@ -29,10 +29,8 @@ final class ICalendarTests: XCTestCase {
         }
     }
 
-    func testICalendar() throws {
+    func testICalendarWithEvent() throws {
         var cal = ICalendar()
-        
-        
         let description = "Test"
         let uid = "test"
 
