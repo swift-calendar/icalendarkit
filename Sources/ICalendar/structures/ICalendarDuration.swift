@@ -16,7 +16,7 @@ public struct ICalendarDuration: ICalendarEncodable {
         if let weeks = weeks {
             encodedDuration = "\(weeks)W"
         } else {
-            encodedDuration = "\(days ?? 0)D\(hours ?? 0)H\(minutes ?? 0)M\(seconds ?? 0)S"
+            encodedDuration = "\(days ?? 0)DT\(hours ?? 0)H\(minutes ?? 0)M\(seconds ?? 0)S"
         }
 
         return "\(negative ? "-" : "")P\(encodedDuration)"
