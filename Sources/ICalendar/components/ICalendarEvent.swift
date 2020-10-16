@@ -44,7 +44,7 @@ public struct ICalendarEvent: ICalendarComponent {
     /// This property specifies when the calendar component begins.
     ///
     /// See https://tools.ietf.org/html/rfc5545#section-3.8.2.4
-    public var dtstart: Date?
+    public var dtstart: ICalendarDate?
     /// This property specifi9es information related to the global
     /// position for the activity specified by a calendar component.
     ///
@@ -118,7 +118,7 @@ public struct ICalendarEvent: ICalendarComponent {
     /// component ends.
     ///
     /// See https://tools.ietf.org/html/rfc5545#section-3.8.2.2
-    public var dtend: Date? {
+    public var dtend: ICalendarDate? {
         willSet { duration = nil }
     }
     /// This property specifies a positive duration of time.
@@ -173,7 +173,7 @@ public struct ICalendarEvent: ICalendarComponent {
         classification: String? = nil,
         created: Date? = Date(),
         description: String? = nil,
-        dtstart: Date? = nil,
+        dtstart: ICalendarDate? = nil,
         geo: ICalendarGeographicPosition? = nil,
         lastModified: Date? = Date(),
         location: String? = nil,
@@ -186,7 +186,7 @@ public struct ICalendarEvent: ICalendarComponent {
         url: URL? = nil,
         recurrenceId: Date? = nil,
         rrule: String? = nil,
-        dtend: Date? = nil,
+        dtend: ICalendarDate? = nil,
         duration: ICalendarDuration? = nil,
         alarms: [ICalendarAlarm] = []
     ) {

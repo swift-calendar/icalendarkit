@@ -39,8 +39,9 @@ final class ICalendarTests: XCTestCase {
             uid: uid,
             created: dates[1].date,
             description: description,
-            dtstart: dates[2].date,
-            lastModified: dates[3].date
+            dtstart: ICalendarDate(date: dates[2].date),
+            lastModified: dates[3].date,
+            dtend: ICalendarDate(date: dates[4].date, ignoreTime: true)
         ))
 
         XCTAssertEqual(cal.iCalendarEncoded, [
@@ -55,6 +56,7 @@ final class ICalendarTests: XCTestCase {
             "DESCRIPTION:\(description)",
             "DTSTART:\(dates[2].encoded)",
             "LAST-MODIFIED:\(dates[3].encoded)",
+            "DTEND;VALUE=DATE:\(dates[4].encodedWithoutTime)",
             "END:VEVENT",
             "END:VCALENDAR"
         ].map { "\($0)\r\n" }.joined())

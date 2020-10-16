@@ -16,7 +16,7 @@ var cal = ICalendar()
 
 cal.events.append(ICalendarEvent(
     description: "My awesome event",
-    dtstart: Date(),
+    dtstart: ICalendarDate(date: Date()),
     duration: ICalendarDuration(hours: 1)
 ))
 

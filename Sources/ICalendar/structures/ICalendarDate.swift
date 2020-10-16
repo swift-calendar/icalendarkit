@@ -13,9 +13,7 @@ public struct ICalendarDate: ICalendarPropertyEncodable {
         return formatter.string(from: date)
     }
     public var parameters: [(String, [String])] {
-        [
-            ("VALUE", [ignoreTime ? "DATE" : "DATE-TIME"])
-        ]
+        ignoreTime ? [("VALUE", ["DATE"])] : []
     }
 
     public init(date: Date, ignoreTime: Bool = false) {
