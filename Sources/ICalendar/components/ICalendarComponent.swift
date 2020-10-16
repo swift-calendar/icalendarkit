@@ -21,7 +21,7 @@ public extension ICalendarComponent {
 
     var iCalendarEncoded: String {
         propertiesForEncoding
-            .compactMap { (key, value) in value.map { "\(key): \($0.iCalendarEncoded)\r\n" } }
+            .compactMap { (key, value) in value.map { "\(key):\($0.iCalendarEncoded)\r\n" } }
             .joined()
     }
 }

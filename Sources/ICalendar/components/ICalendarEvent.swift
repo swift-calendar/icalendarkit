@@ -149,11 +149,13 @@ public struct ICalendarEvent: ICalendarComponent {
             ("CLASS", classification),
             ("CREATED", created),
             ("DESCRIPTION", description),
+            ("DTSTART", dtstart),
             ("GEO", geo),
             ("LAST-MODIFIED", lastModified),
             ("LOCATION", location),
             ("ORGANIZER", organizer),
-            ("PRIORITY", seq),
+            ("PRIORITY", priority),
+            ("SEQ", seq),
             ("STATUS", status),
             ("SUMMARY", summary),
             ("TRANSP", transp),
@@ -166,8 +168,8 @@ public struct ICalendarEvent: ICalendarComponent {
     }
 
     public init(
-        dtstamp: Date,
-        uid: String,
+        dtstamp: Date = Date(),
+        uid: String = UUID().uuidString,
         classification: String? = nil,
         created: Date? = Date(),
         description: String? = nil,
