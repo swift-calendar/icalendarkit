@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (58% documented)</p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/ICalendarComponent.html">ICalendarComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ICalendarEncodable.html">ICalendarEncodable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/ICalendar.html">ICalendar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ICalendarAlarm.html">ICalendarAlarm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ICalendarDuration.html">ICalendarDuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ICalendarEvent.html">ICalendarEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ICalendarFreeBusy.html">ICalendarFreeBusy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ICalendarGeographicPosition.html">ICalendarGeographicPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ICalendarJournal.html">ICalendarJournal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ICalendarProductIdentifier.html">ICalendarProductIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ICalendarTimeZone.html">ICalendarTimeZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ICalendarToDo.html">ICalendarToDo</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='icalendar-for-swift' class='heading'>iCalendar for Swift</h1>
+
+<p><a href="https://github.com/fwcd/swift-icalendar/actions"><img src="https://github.com/fwcd/swift-icalendar/workflows/Linux/badge.svg" alt="Linux"></a>
+<a href="https://github.com/fwcd/swift-icalendar/actions"><img src="https://github.com/fwcd/swift-icalendar/workflows/macOS/badge.svg" alt="macOS"></a></p>
+
+<p>A lightweight iCalendar (RFC 5545, <code>.ics</code>) encoder for Swift.</p>
+<h2 id='example' class='heading'>Example</h2>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+<span class="kd">import</span> <span class="kt">ICalendar</span>
+
+<span class="k">var</span> <span class="nv">cal</span> <span class="o">=</span> <span class="kt">ICalendar</span><span class="p">()</span>
+
+<span class="n">cal</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="kt">ICalendarEvent</span><span class="p">(</span>
+    <span class="nv">description</span><span class="p">:</span> <span class="s">"My awesome event"</span><span class="p">,</span>
+    <span class="nv">dtstart</span><span class="p">:</span> <span class="kt">Date</span><span class="p">(),</span>
+    <span class="nv">duration</span><span class="p">:</span> <span class="kt">ICalendarDuration</span><span class="p">(</span><span class="nv">hours</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">))</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">cal</span><span class="o">.</span><span class="n">iCalendarEncoded</span><span class="p">)</span>
+
+<span class="c1">// The output looks similar to this:</span>
+<span class="c1">//</span>
+<span class="c1">// BEGIN:VCALENDAR</span>
+<span class="c1">// VERSION:2.0</span>
+<span class="c1">// PRODID:-//swift-icalendar//swift-icalendar//EN</span>
+<span class="c1">// CALSCALE:GREGORIAN</span>
+<span class="c1">// BEGIN:VEVENT</span>
+<span class="c1">// DTSTAMP:20201016T194809</span>
+<span class="c1">// UID:B22CF435-BE06-4EE9-B7B0-6EE6878E3A06</span>
+<span class="c1">// CREATED:20201016T194809</span>
+<span class="c1">// DESCRIPTION:My awesome event</span>
+<span class="c1">// DTSTART:20201016T194809</span>
+<span class="c1">// LAST-MODIFIED:20201016T194809</span>
+<span class="c1">// DURATION:P0DT1H0M0S</span>
+<span class="c1">// END:VEVENT</span>
+<span class="c1">// END:VCALENDAR</span>
+</code></pre>
+
+<blockquote>
+<p>Hint: Run <code>swift run --repl</code> to run an interactive Swift shell with access to the library</p>
+</blockquote>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-10-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
