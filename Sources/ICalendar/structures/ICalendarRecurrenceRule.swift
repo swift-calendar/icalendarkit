@@ -35,27 +35,36 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
         didSet { assert(byHours?.allSatisfy { (0..<24).contains($0) } ?? true, "by-hour rules must be between 0 and 24 (exclusive): \(byHours ?? [])") }
     }
     /// At which days (of the week/year) it should occur.
-    public var byDays: [SignedDay]?
-    /// At which days of the month it should occur.
-    public var byDaysOfMonth: [SignedDayOfMonth]?
-    /// At which days of the year it should occur.
-    public var byDaysOfYear: [SignedDayOfYear]?
-    /// At which weeks of the year it should occur.
-    public var byWeeksOfYear: [SignedWeekOfYear]?
+    public var byDays: [Day]?
+    /// At which days of the month it should occur. Specifies a COMMA-separated
+    /// list of days of the month. Valid values are 1 to 31 or -31 to -1.
+    public var byDaysOfMonth: [Int]? {
+        didSet { assert(byDaysOfYear?.allSatisfy { (1...31).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 31 or -31 and -1: \(byDaysOfMonth ?? [])") }
+    }
+    /// At which days of the year it should occur. Specifies a list of days
+    /// of the year.  Valid values are 1 to 366 or -366 to -1.
+    public var byDaysOfYear: [Int]? {
+        didSet { assert(byWeeksOfYear?.allSatisfy { (1...366).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 366 or -366 and -1: \(byDaysOfYear ?? [])") }
+    }
+    /// At which weeks of the year it should occur. Specificies a list of
+    /// ordinals specifying weeks of the year. Valid values are 1 to 53 or -53 to
+    /// -1.
+    public var byWeeksOfYear: [Int]? {
+        didSet { assert(byWeeksOfYear?.allSatisfy { (1...53).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 53 or -53 and -1: \(byWeeksOfYear ?? [])") }
+    }
     /// At which months it should occur.
     /// Must be between 1 and 12 (inclusive).
     public var byMonths: [Int]? {
         didSet { assert(byMonths?.allSatisfy { (1...12).contains($0) } ?? true, "by-month-of-year rules must be between 1 and 12: \(byMonths ?? [])") }
     }
-    /// Specifies a list of values
-    /// that corresponds to the nth occurrence within the set of
-    /// recurrence instances specified by the rule. By-set-pos operates on
-    /// a set of recurrence instances in one interval of the recurrence
-    /// rule.  For example, in a weekly rule, the interval would be one
+    /// Specifies a list of values that corresponds to the nth occurrence within
+    /// the set of recurrence instances specified by the rule. By-set-pos
+    /// operates on a set of recurrence instances in one interval of the
+    /// recurrence rule. For example, in a weekly rule, the interval would be one
     /// week A set of recurrence instances starts at the beginning of the
-    /// interval defined by the frequency rule part.  Valid values are 1 to 366
-    /// or -366 to -1.  It MUST only be used in conjunction with another
-    /// by-xxx rule part.
+    /// interval defined by the frequency rule part. Valid values are 1 to 366 or
+    /// -366 to -1. It MUST only be used in conjunction with another by-xxx rule
+    /// part.
     public var bySetPos: [Int]? {
         didSet { assert(bySetPos?.allSatisfy { (1...366).contains(abs($0)) } ?? true, "by-set-pos rules must be between 1 and 366 or -366 and -1: \(bySetPos ?? [])") }
     }
@@ -111,58 +120,19 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
         public var iCalendarEncoded: String { rawValue }
     }
 
-    public struct SignedDay: ICalendarEncodable {
+    public struct Day: ICalendarEncodable {
         /// The week of the day. May be negative.
         public let weekOfYear: Int?
         /// The day of the week.
         public let dayOfWeek: DayOfWeek
 
-        public var iCalendarEncoded: String { "\(weekOfYear.map { "\($0.signum() > 0 ? "" : "-")\(abs($0))" } ?? "")\(dayOfWeek.iCalendarEncoded)" }
+        public var iCalendarEncoded: String { "\(weekOfYear.map(String.init) ?? "")\(dayOfWeek.iCalendarEncoded)" }
 
         public init(weekOfYear: Int? = nil, dayOfWeek: DayOfWeek) {
             self.weekOfYear = weekOfYear
             self.dayOfWeek = dayOfWeek
 
-            assert(weekOfYear.map { (1...53).contains(abs($0)) } ?? true, "Week-of-year \(weekOfYear.map(String.init) ?? "?") is not between 1 and 53 (inclusive)")
-        }
-    }
-
-    public struct SignedDayOfMonth: ICalendarEncodable {
-        /// The day of the month. May be negative.
-        public let dayOfMonth: Int
-
-        public var iCalendarEncoded: String { "\(dayOfMonth.signum() > 0 ? "" : "-")\(abs(dayOfMonth))" }
-
-        public init(dayOfMonth: Int) {
-            self.dayOfMonth = dayOfMonth
-
-            assert((1...31).contains(abs(dayOfMonth)), "Day-of-month \(dayOfMonth) is not between 1 and 31 (inclusive)")
-        }
-    }
-
-    public struct SignedDayOfYear: ICalendarEncodable {
-        /// The day of the year. May be negative.
-        public let dayOfYear: Int
-
-        public var iCalendarEncoded: String { "\(dayOfYear.signum() > 0 ? "" : "-")\(abs(dayOfYear))" }
-
-        public init(dayOfYear: Int) {
-            self.dayOfYear = dayOfYear
-
-            assert((1...366).contains(abs(dayOfYear)), "Day-of-year \(dayOfYear) is not between 1 and 366 (inclusive)")
-        }
-    }
-
-    public struct SignedWeekOfYear: ICalendarEncodable {
-        /// The week of the year. May be negative.
-        public let weekOfYear: Int
-
-        public var iCalendarEncoded: String { "\(weekOfYear.signum() > 0 ? "" : "-")\(abs(weekOfYear))" }
-
-        public init(weekOfYear: Int) {
-            self.weekOfYear = weekOfYear
-
-            assert((1...53).contains(abs(weekOfYear)), "Week-of-year \(weekOfYear) is not between 1 and 53 (inclusive)")
+            assert(weekOfYear.map { (1...53).contains(abs($0)) } ?? true, "Week-of-year \(weekOfYear.map(String.init) ?? "?") is not between 1 and 53 or -53 and -1 (each inclusive)")
         }
     }
 
