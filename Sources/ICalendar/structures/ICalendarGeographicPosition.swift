@@ -6,12 +6,12 @@ public struct ICalendarGeographicPosition: ICalendarPropertyEncodable {
     public let latitude: Double
     public let longitude: Double
 
+    public var iCalendarEncoded: String {
+        "\(latitude);\(longitude)"
+    }
+
     public init(latitude: Double, longitude: Double) {
         self.latitude = latitude
         self.longitude = longitude
-    }
-
-    public var iCalendarEncoded: String {
-        "\(latitude);\(longitude)"
     }
 }
