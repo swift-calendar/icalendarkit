@@ -8,10 +8,10 @@ public struct ICalendarContentLine: ICalendarEncodable {
 
     public let key: String
     public let params: [(String, [String])]
-    public let value: String
+    public let value: ICalendarEncodable
 
     public var iCalendarEncoded: String {
-        let raw = "\(key)\(params.map { ";\($0.0)=\($0.1.joined(separator: ","))" }.joined()):\(value)"
+        let raw = "\(key)\(params.map { ";\($0.0)=\($0.1.joined(separator: ","))" }.joined()):\(value.iCalendarEncoded)"
         let chunks = raw.chunks(ofLength: Self.maxLength)
         assert(!chunks.isEmpty)
 
@@ -33,9 +33,14 @@ public struct ICalendarContentLine: ICalendarEncodable {
             .joined()
     }
 
-    public init(key: String, params: [(String, [String])], value: String) {
+    public init?(key: String, params: [(String, [String])] = [], value: ICalendarEncodable) {
         self.key = key
         self.params = params
         self.value = value
+    }
+
+    public static func line(_ key: String, params: [(String, [String])] = [], _ value: ICalendarEncodable?) -> ICalendarContentLine? {
+        guard let value = value else { return nil }
+        return ICalendarContentLine(key: key, params: params, value: value)
     }
 }

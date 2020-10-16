@@ -142,28 +142,28 @@ public struct ICalendarEvent: ICalendarComponent {
     public var alarms: [ICalendarAlarm]
     public var children: [ICalendarComponent] { alarms }
 
-    public var properties: [(String, ICalendarEncodable?)] {
+    public var properties: [ICalendarContentLine?] {
         [
-            ("DTSTAMP", dtstamp),
-            ("UID", uid),
-            ("CLASS", classification),
-            ("CREATED", created),
-            ("DESCRIPTION", description),
-            ("DTSTART", dtstart),
-            ("GEO", geo),
-            ("LAST-MODIFIED", lastModified),
-            ("LOCATION", location),
-            ("ORGANIZER", organizer),
-            ("PRIORITY", priority),
-            ("SEQ", seq),
-            ("STATUS", status),
-            ("SUMMARY", summary),
-            ("TRANSP", transp),
-            ("URL", url),
-            ("RECURRENCE-ID", recurrenceId),
-            ("RRULE", rrule),
-            ("DTEND", dtend),
-            ("DURATION", duration)
+            .line("DTSTAMP", dtstamp),
+            .line("UID", uid),
+            .line("CLASS", classification),
+            .line("CREATED", created),
+            .line("DESCRIPTION", description),
+            .line("DTSTART", dtstart),
+            .line("GEO", geo),
+            .line("LAST-MODIFIED", lastModified),
+            .line("LOCATION", location),
+            .line("ORGANIZER", organizer),
+            .line("PRIORITY", priority),
+            .line("SEQ", seq),
+            .line("STATUS", status),
+            .line("SUMMARY", summary),
+            .line("TRANSP", transp),
+            .line("URL", url),
+            .line("RECURRENCE-ID", recurrenceId),
+            .line("RRULE", rrule),
+            .line("DTEND", dtend),
+            .line("DURATION", duration)
         ]
     }
 

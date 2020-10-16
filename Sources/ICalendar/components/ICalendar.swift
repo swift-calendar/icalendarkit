@@ -40,12 +40,12 @@ public struct ICalendar: ICalendarComponent {
         [events, toDos, journals, freeBusies, timeZones, alarms].flatMap { $0 as! [ICalendarComponent] }
     }
 
-    public var properties: [(String, ICalendarEncodable?)] {
+    public var properties: [ICalendarContentLine?] {
         [
-            ("VERSION", version),
-            ("PRODID", prodid),
-            ("CALSCALE", calscale),
-            ("METHOD", method)
+            .line("VERSION", version),
+            .line("PRODID", prodid),
+            .line("CALSCALE", calscale),
+            .line("METHOD", method)
         ]
     }
 

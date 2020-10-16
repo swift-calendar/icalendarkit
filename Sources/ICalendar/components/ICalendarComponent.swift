@@ -5,23 +5,23 @@ public protocol ICalendarComponent: ICalendarEncodable {
     var component: String { get }
 
     /// The component's properties.
-    var properties: [(String, ICalendarEncodable?)] { get }
+    var properties: [ICalendarContentLine?] { get }
 
     /// The component's children.
     var children: [ICalendarComponent] { get }
 }
 
 public extension ICalendarComponent {
-    var properties: [(String, ICalendarEncodable?)] { [] }
+    var properties: [ICalendarContentLine?] { [] }
     var children: [ICalendarComponent] { [] }
 
-    var propertiesForEncoding: [(String, ICalendarEncodable?)] {
-        [("BEGIN", component)] + properties + children.flatMap(\.propertiesForEncoding) + [("END", component)]
+    var contentLines: [ICalendarContentLine?] {
+        [.line("BEGIN", component)] + properties + children.flatMap(\.contentLines) + [.line("END", component)]
     }
 
     var iCalendarEncoded: String {
-        propertiesForEncoding
-            .compactMap { (key, value) in value.map { "\(key):\($0.iCalendarEncoded)\r\n" } }
+        contentLines
+            .compactMap { $0?.iCalendarEncoded }
             .joined()
     }
 }
