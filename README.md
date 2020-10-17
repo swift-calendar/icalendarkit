@@ -1,8 +1,8 @@
 # iCalendarKit for Swift
 
-[![Linux](https://github.com/fwcd/swift-icalendar/workflows/Linux/badge.svg)](https://github.com/fwcd/swift-icalendar/actions)
-[![macOS](https://github.com/fwcd/swift-icalendar/workflows/macOS/badge.svg)](https://github.com/fwcd/swift-icalendar/actions)
-[![Docs](https://github.com/fwcd/swift-icalendar/workflows/Docs/badge.svg)](https://fwcd.github.io/swift-icalendar)
+[![Linux](https://github.com/swift-calendar/icalendarkit/workflows/Linux/badge.svg)](https://github.com/swift-calendar/icalendarkit/actions)
+[![macOS](https://github.com/swift-calendar/icalendarkit/workflows/macOS/badge.svg)](https://github.com/swift-calendar/icalendarkit/actions)
+[![Docs](https://github.com/swift-calendar/icalendarkit/workflows/Docs/badge.svg)](https://swift-calendar.github.io/icalendarkit)
 
 A lightweight iCalendar (RFC 5545, `.ics`) encoder for Swift.
 
