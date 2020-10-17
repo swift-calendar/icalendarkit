@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ICalendarRecurrenceRule Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/ICalendarRecurrenceRule" class="dashAnchor"></a>
+    <a title="ICalendarRecurrenceRule Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (55% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ICalendarRecurrenceRule Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ICalendarComponent.html">ICalendarComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ICalendarEncodable.html">ICalendarEncodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendar.html">ICalendar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarAlarm.html">ICalendarAlarm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarContentLine.html">ICalendarContentLine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarDate.html">ICalendarDate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarDuration.html">ICalendarDuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarEvent.html">ICalendarEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarFreeBusy.html">ICalendarFreeBusy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarGeographicPosition.html">ICalendarGeographicPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarJournal.html">ICalendarJournal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarProductIdentifier.html">ICalendarProductIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarRecurrenceRule.html">ICalendarRecurrenceRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarRecurrenceRule/Frequency.html">– Frequency</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarRecurrenceRule/DayOfWeek.html">– DayOfWeek</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarRecurrenceRule/Day.html">– Day</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarTimeZone.html">ICalendarTimeZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarToDo.html">ICalendarToDo</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ICalendarRecurrenceRule</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarRecurrenceRule</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>This value type is used to identify properties that contain
+a recurrence rule specification.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.3.10">https://tools.ietf.org/html/rfc5545#section-3.3.10</a></p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV9frequencyAC9FrequencyOvp"></a>
+                    <a name="//apple_ref/swift/Property/frequency" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV9frequencyAC9FrequencyOvp">frequency</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The frequency of the recurrence.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarRecurrenceRule/Frequency.html">Frequency</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV8intervalSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/interval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV8intervalSiSgvp">interval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>At which interval the recurrence repeats (in terms of the frequency).
+E.g. 1 means every hour for an hourly rule, &hellip;
+The default value is 1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">interval</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV5untilAA0A4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/until" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV5untilAA0A4DateVSgvp">until</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The end date/time. Must have the same &lsquo;ignoreTime&rsquo;-value as dtstart.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">until</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDate.html">ICalendarDate</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV5countSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/count" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV5countSiSgvp">count</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of recurrences.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV8bySecondSaySiGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/bySecond" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV8bySecondSaySiGSgvp">bySecond</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>At which seconds of the minute it should occur.
+Must be between 0 and 60 (inclusive).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bySecond</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV8byMinuteSaySiGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/byMinute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV8byMinuteSaySiGSgvp">byMinute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>At which minutes of the hour it should occur.
+Must be between 0 and 60 (exclusive).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">byMinute</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV6byHourSaySiGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/byHour" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV6byHourSaySiGSgvp">byHour</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>At which hours of the day it should occur.
+Must be between 0 and 24 (exclusive).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">byHour</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV5byDaySayAC0E0VGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/byDay" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV5byDaySayAC0E0VGSgvp">byDay</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>At which days (of the week/year) it should occur.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">byDay</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/ICalendarRecurrenceRule/Day.html">Day</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV12byDayOfMonthSaySiGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/byDayOfMonth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV12byDayOfMonthSaySiGSgvp">byDayOfMonth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>At which days of the month it should occur. Specifies a COMMA-separated
+list of days of the month. Valid values are 1 to 31 or -31 to -1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">byDayOfMonth</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV11byDayOfYearSaySiGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/byDayOfYear" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV11byDayOfYearSaySiGSgvp">byDayOfYear</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>At which days of the year it should occur. Specifies a list of days
+of the year.  Valid values are 1 to 366 or -366 to -1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">byDayOfYear</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV12byWeekOfYearSaySiGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/byWeekOfYear" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV12byWeekOfYearSaySiGSgvp">byWeekOfYear</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>At which weeks of the year it should occur. Specificies a list of
+ordinals specifying weeks of the year. Valid values are 1 to 53 or -53 to
+-1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">byWeekOfYear</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV7byMonthSaySiGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/byMonth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV7byMonthSaySiGSgvp">byMonth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>At which months it should occur.
+Must be between 1 and 12 (inclusive).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">byMonth</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV8bySetPosSaySiGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/bySetPos" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV8bySetPosSaySiGSgvp">bySetPos</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies a list of values that corresponds to the nth occurrence within
+the set of recurrence instances specified by the rule. By-set-pos
+operates on a set of recurrence instances in one interval of the
+recurrence rule. For example, in a weekly rule, the interval would be one
+week A set of recurrence instances starts at the beginning of the
+interval defined by the frequency rule part. Valid values are 1 to 366 or
+-366 to -1. It MUST only be used in conjunction with another by-xxx rule
+part.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bySetPos</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV15startOfWorkweekAC03DayE4WeekOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/startOfWorkweek" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV15startOfWorkweekAC03DayE4WeekOSgvp">startOfWorkweek</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The day on which the workweek starts.
+Monday by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">startOfWorkweek</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarRecurrenceRule/DayOfWeek.html">DayOfWeek</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV16iCalendarEncodedSSvp"></a>
+                    <a name="//apple_ref/swift/Property/iCalendarEncoded" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV16iCalendarEncodedSSvp">iCalendarEncoded</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">iCalendarEncoded</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV9FrequencyO"></a>
+                    <a name="//apple_ref/swift/Enum/Frequency" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV9FrequencyO">Frequency</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ICalendarRecurrenceRule/Frequency.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Frequency</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ICalendarEncodable.html">ICalendarEncodable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV9DayOfWeekO"></a>
+                    <a name="//apple_ref/swift/Enum/DayOfWeek" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV9DayOfWeekO">DayOfWeek</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ICalendarRecurrenceRule/DayOfWeek.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DayOfWeek</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ICalendarEncodable.html">ICalendarEncodable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV3DayV"></a>
+                    <a name="//apple_ref/swift/Struct/Day" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV3DayV">Day</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ICalendarRecurrenceRule/Day.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Day</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ICalendarEncodable.html">ICalendarEncodable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A14RecurrenceRuleV9frequency8interval5until5count8bySecond0H6Minute0H4Hour0H3Day0hL7OfMonth0hlM4Year0h4WeekmO00hN00H6SetPos05startM8WorkweekA2C9FrequencyO_SiSgAA0A4DateVSgATSaySiGSgA2YSayAC0L0VGSgA5yC0lmP0OSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(frequency:interval:until:count:bySecond:byMinute:byHour:byDay:byDayOfMonth:byDayOfYear:byWeekOfYear:byMonth:bySetPos:startOfWorkweek:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A14RecurrenceRuleV9frequency8interval5until5count8bySecond0H6Minute0H4Hour0H3Day0hL7OfMonth0hlM4Year0h4WeekmO00hN00H6SetPos05startM8WorkweekA2C9FrequencyO_SiSgAA0A4DateVSgATSaySiGSgA2YSayAC0L0VGSgA5yC0lmP0OSgtcfc">init(frequency:<wbr>interval:<wbr>until:<wbr>count:<wbr>bySecond:<wbr>byMinute:<wbr>byHour:<wbr>byDay:<wbr>byDayOfMonth:<wbr>byDayOfYear:<wbr>byWeekOfYear:<wbr>byMonth:<wbr>bySetPos:<wbr>startOfWorkweek:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarRecurrenceRule/Frequency.html">Frequency</a></span><span class="p">,</span>
+    <span class="nv">interval</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">until</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDate.html">ICalendarDate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">bySecond</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">byMinute</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">byHour</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">byDay</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/ICalendarRecurrenceRule/Day.html">Day</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">byDayOfMonth</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">byDayOfYear</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">byWeekOfYear</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">byMonth</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">bySetPos</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">startOfWorkweek</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarRecurrenceRule/DayOfWeek.html">DayOfWeek</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-10-17)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

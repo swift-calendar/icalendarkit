@@ -93,15 +93,15 @@
     },
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/components/ICalendarEvent.swift",
-      "line": 142,
+      "line": 148,
       "symbol": "ICalendarEvent.alarms",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/components/ICalendarEvent.swift",
-      "line": 170,
-      "symbol": "ICalendarEvent.init(dtstamp:uid:classification:created:description:dtstart:geo:lastModified:location:organizer:priority:seq:status:summary:transp:url:recurrenceId:rrule:dtend:duration:alarms:)",
+      "line": 176,
+      "symbol": "ICalendarEvent.init(dtstamp:uid:classification:created:description:dtstart:geo:lastModified:location:organizer:priority:seq:status:summary:transp:url:dtend:duration:recurrenceId:rrule:alarms:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -128,15 +128,15 @@
     },
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/components/ICalendarToDo.swift",
-      "line": 149,
+      "line": 155,
       "symbol": "ICalendarToDo.alarms",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/components/ICalendarToDo.swift",
-      "line": 178,
-      "symbol": "ICalendarToDo.init(dtstamp:uid:classification:created:completed:description:dtstart:geo:lastModified:location:organizer:percentComplete:priority:seq:status:summary:transp:url:recurrenceId:rrule:due:duration:alarms:)",
+      "line": 184,
+      "symbol": "ICalendarToDo.init(dtstamp:uid:classification:created:completed:description:dtstart:geo:lastModified:location:organizer:percentComplete:priority:seq:status:summary:transp:url:due:duration:recurrenceId:rrule:alarms:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -246,66 +246,94 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDate.swift",
+      "line": 24,
+      "symbol": "ICalendarDate.dateOnly(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDate.swift",
+      "line": 28,
+      "symbol": "ICalendarDate.dateTime(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
-      "line": 5,
-      "symbol": "ICalendarDuration.negative",
+      "line": 16,
+      "symbol": "ICalendarDuration.parts",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
-      "line": 7,
-      "symbol": "ICalendarDuration.weeks",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
-      "line": 8,
-      "symbol": "ICalendarDuration.days",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
-      "line": 9,
-      "symbol": "ICalendarDuration.hours",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
-      "line": 10,
-      "symbol": "ICalendarDuration.minutes",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
-      "line": 11,
-      "symbol": "ICalendarDuration.seconds",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
-      "line": 13,
+      "line": 30,
       "symbol": "ICalendarDuration.iCalendarEncoded",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
-      "line": 25,
-      "symbol": "ICalendarDuration.init(negative:weeks:)",
+      "line": 43,
+      "symbol": "ICalendarDuration.init(totalSeconds:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
-      "line": 30,
-      "symbol": "ICalendarDuration.init(negative:days:hours:minutes:seconds:)",
+      "line": 47,
+      "symbol": "ICalendarDuration.init(integerLiteral:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
+      "line": 51,
+      "symbol": "ICalendarDuration.negate()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
+      "line": 55,
+      "symbol": "ICalendarDuration.-(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
+      "line": 67,
+      "symbol": "ICalendarDuration.weeks(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
+      "line": 71,
+      "symbol": "ICalendarDuration.days(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
+      "line": 75,
+      "symbol": "ICalendarDuration.hours(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
+      "line": 79,
+      "symbol": "ICalendarDuration.minutes(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarDuration.swift",
+      "line": 83,
+      "symbol": "ICalendarDuration.seconds(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
@@ -354,6 +382,188 @@
       "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarProductIdentifier.swift",
       "line": 12,
       "symbol": "ICalendarProductIdentifier.init(segments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 94,
+      "symbol": "ICalendarRecurrenceRule.iCalendarEncoded",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 98,
+      "symbol": "ICalendarRecurrenceRule.Frequency",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 99,
+      "symbol": "ICalendarRecurrenceRule.Frequency.secondly",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 100,
+      "symbol": "ICalendarRecurrenceRule.Frequency.minutely",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 101,
+      "symbol": "ICalendarRecurrenceRule.Frequency.hourly",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 102,
+      "symbol": "ICalendarRecurrenceRule.Frequency.daily",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 103,
+      "symbol": "ICalendarRecurrenceRule.Frequency.weekly",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 104,
+      "symbol": "ICalendarRecurrenceRule.Frequency.monthly",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 105,
+      "symbol": "ICalendarRecurrenceRule.Frequency.yearly",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 107,
+      "symbol": "ICalendarRecurrenceRule.Frequency.iCalendarEncoded",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 110,
+      "symbol": "ICalendarRecurrenceRule.DayOfWeek",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 111,
+      "symbol": "ICalendarRecurrenceRule.DayOfWeek.monday",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 112,
+      "symbol": "ICalendarRecurrenceRule.DayOfWeek.tuesday",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 113,
+      "symbol": "ICalendarRecurrenceRule.DayOfWeek.wednesday",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 114,
+      "symbol": "ICalendarRecurrenceRule.DayOfWeek.thursday",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 115,
+      "symbol": "ICalendarRecurrenceRule.DayOfWeek.friday",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 116,
+      "symbol": "ICalendarRecurrenceRule.DayOfWeek.saturday",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 117,
+      "symbol": "ICalendarRecurrenceRule.DayOfWeek.sunday",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 119,
+      "symbol": "ICalendarRecurrenceRule.DayOfWeek.iCalendarEncoded",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 122,
+      "symbol": "ICalendarRecurrenceRule.Day",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 128,
+      "symbol": "ICalendarRecurrenceRule.Day.iCalendarEncoded",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 130,
+      "symbol": "ICalendarRecurrenceRule.Day.init(week:dayOfWeek:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 137,
+      "symbol": "ICalendarRecurrenceRule.Day.every(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 141,
+      "symbol": "ICalendarRecurrenceRule.Day.first(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 145,
+      "symbol": "ICalendarRecurrenceRule.Day.last(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/swift-icalendar/swift-icalendar/Sources/ICalendar/structures/ICalendarRecurrenceRule.swift",
+      "line": 150,
+      "symbol": "ICalendarRecurrenceRule.init(frequency:interval:until:count:bySecond:byMinute:byHour:byDay:byDayOfMonth:byDayOfYear:byWeekOfYear:byMonth:bySetPos:startOfWorkweek:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }

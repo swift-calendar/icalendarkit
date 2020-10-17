@@ -17,7 +17,7 @@
     <a title="ICalendarEvent Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (61% documented)</p>
+        <p><a href="../index.html"> Docs</a> (55% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -98,6 +98,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/ICalendarProductIdentifier.html">ICalendarProductIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarRecurrenceRule.html">ICalendarRecurrenceRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarRecurrenceRule/Frequency.html">– Frequency</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarRecurrenceRule/DayOfWeek.html">– DayOfWeek</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ICalendarRecurrenceRule/Day.html">– Day</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/ICalendarTimeZone.html">ICalendarTimeZone</a>
@@ -647,6 +659,70 @@ associated with the iCalendar object.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:9ICalendar0A5EventV5dtendAA0A4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dtend" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A5EventV5dtendAA0A4DateVSgvp">dtend</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property specifies the date and time that a calendar
+component ends.</p>
+
+<p>Must have the same &lsquo;ignoreTime&rsquo;-value as tstart.
+Mutually exclusive to &lsquo;due&rsquo;.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.2.2">https://tools.ietf.org/html/rfc5545#section-3.8.2.2</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dtend</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDate.html">ICalendarDate</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ICalendar0A5EventV8durationAA0A8DurationVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/duration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A5EventV8durationAA0A8DurationVSgvp">duration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property specifies a positive duration of time.</p>
+
+<p>Mutually exclusive to &lsquo;due&rsquo;.</p>
+
+<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.2.5">https://tools.ietf.org/html/rfc5545#section-3.8.2.5</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDuration.html">ICalendarDuration</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:9ICalendar0A5EventV12recurrenceId10Foundation4DateVSgvp"></a>
                     <a name="//apple_ref/swift/Property/recurrenceId" class="dashAnchor"></a>
                     <a class="token" href="#/s:9ICalendar0A5EventV12recurrenceId10Foundation4DateVSgvp">recurrenceId</a>
@@ -680,9 +756,9 @@ of the recurrence instance.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ICalendar0A5EventV5rruleSSSgvp"></a>
+                    <a name="/s:9ICalendar0A5EventV5rruleAA0A14RecurrenceRuleVSgvp"></a>
                     <a name="//apple_ref/swift/Property/rrule" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A5EventV5rruleSSSgvp">rrule</a>
+                    <a class="token" href="#/s:9ICalendar0A5EventV5rruleAA0A14RecurrenceRuleVSgvp">rrule</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -701,66 +777,7 @@ definitions.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rrule</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ICalendar0A5EventV5dtendAA0A4DateVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dtend" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A5EventV5dtendAA0A4DateVSgvp">dtend</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This property specifies the date and time that a calendar
-component ends.</p>
-
-<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.2.2">https://tools.ietf.org/html/rfc5545#section-3.8.2.2</a></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dtend</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDate.html">ICalendarDate</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ICalendar0A5EventV8durationAA0A8DurationVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/duration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A5EventV8durationAA0A8DurationVSgvp">duration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This property specifies a positive duration of time.</p>
-
-<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.8.2.5">https://tools.ietf.org/html/rfc5545#section-3.8.2.5</a></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDuration.html">ICalendarDuration</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rrule</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarRecurrenceRule.html">ICalendarRecurrenceRule</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -849,9 +866,9 @@ component ends.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ICalendar0A5EventV7dtstamp3uid14classification7created11description7dtstart3geo12lastModified8location9organizer8priority3seq6status7summary6transp3url12recurrenceId5rrule5dtend8duration6alarmsAC10Foundation4DateV_S2SSgA_SgA0_AA0A4DateVSgAA0A18GeographicPositionVSgA1_A0_A0_SiSgA8_A0_A0_A0_AY3URLVSgA1_A0_A4_AA0A8DurationVSgSayAA0A5AlarmVGtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(dtstamp:uid:classification:created:description:dtstart:geo:lastModified:location:organizer:priority:seq:status:summary:transp:url:recurrenceId:rrule:dtend:duration:alarms:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ICalendar0A5EventV7dtstamp3uid14classification7created11description7dtstart3geo12lastModified8location9organizer8priority3seq6status7summary6transp3url12recurrenceId5rrule5dtend8duration6alarmsAC10Foundation4DateV_S2SSgA_SgA0_AA0A4DateVSgAA0A18GeographicPositionVSgA1_A0_A0_SiSgA8_A0_A0_A0_AY3URLVSgA1_A0_A4_AA0A8DurationVSgSayAA0A5AlarmVGtcfc">init(dtstamp:<wbr>uid:<wbr>classification:<wbr>created:<wbr>description:<wbr>dtstart:<wbr>geo:<wbr>lastModified:<wbr>location:<wbr>organizer:<wbr>priority:<wbr>seq:<wbr>status:<wbr>summary:<wbr>transp:<wbr>url:<wbr>recurrenceId:<wbr>rrule:<wbr>dtend:<wbr>duration:<wbr>alarms:<wbr>)</a>
+                    <a name="/s:9ICalendar0A5EventV7dtstamp3uid14classification7created11description7dtstart3geo12lastModified8location9organizer8priority3seq6status7summary6transp3url5dtend8duration12recurrenceId5rrule6alarmsAC10Foundation4DateV_S2SSgA_SgA0_AA0A4DateVSgAA0A18GeographicPositionVSgA1_A0_A0_SiSgA8_A0_A0_A0_AY3URLVSgA4_AA0A8DurationVSgA1_AA0A14RecurrenceRuleVSgSayAA0A5AlarmVGtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(dtstamp:uid:classification:created:description:dtstart:geo:lastModified:location:organizer:priority:seq:status:summary:transp:url:dtend:duration:recurrenceId:rrule:alarms:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ICalendar0A5EventV7dtstamp3uid14classification7created11description7dtstart3geo12lastModified8location9organizer8priority3seq6status7summary6transp3url5dtend8duration12recurrenceId5rrule6alarmsAC10Foundation4DateV_S2SSgA_SgA0_AA0A4DateVSgAA0A18GeographicPositionVSgA1_A0_A0_SiSgA8_A0_A0_A0_AY3URLVSgA4_AA0A8DurationVSgA1_AA0A14RecurrenceRuleVSgSayAA0A5AlarmVGtcfc">init(dtstamp:<wbr>uid:<wbr>classification:<wbr>created:<wbr>description:<wbr>dtstart:<wbr>geo:<wbr>lastModified:<wbr>location:<wbr>organizer:<wbr>priority:<wbr>seq:<wbr>status:<wbr>summary:<wbr>transp:<wbr>url:<wbr>dtend:<wbr>duration:<wbr>recurrenceId:<wbr>rrule:<wbr>alarms:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -883,10 +900,10 @@ component ends.</p>
     <span class="nv">summary</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="nv">transp</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">recurrenceId</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">rrule</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="nv">dtend</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDate.html">ICalendarDate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarDuration.html">ICalendarDuration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">recurrenceId</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">rrule</span><span class="p">:</span> <span class="kt"><a href="../Structs/ICalendarRecurrenceRule.html">ICalendarRecurrenceRule</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="nv">alarms</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/ICalendarAlarm.html">ICalendarAlarm</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="p">)</span></code></pre>
 
@@ -900,7 +917,7 @@ component ends.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-10-16)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-10-17)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
