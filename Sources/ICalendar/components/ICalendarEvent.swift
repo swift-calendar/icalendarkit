@@ -97,20 +97,6 @@ public struct ICalendarEvent: ICalendarComponent {
     ///
     /// See https://tools.ietf.org/html/rfc5545#section-3.8.4.6
     public var url: URL?
-    /// This property is used in conjunction with the "UID" and
-    /// "SEQUENCE" properties to identify a specific instance of a
-    /// recurring "VEVENT", "VTODO", or "VJOURNAL" calendar component.
-    /// The property value is the original value of the "DTSTART" property
-    /// of the recurrence instance.
-    ///
-    /// See https://tools.ietf.org/html/rfc5545#section-3.8.4.4
-    public var recurrenceId: Date?
-    /// This property defines a rule or repeating pattern for
-    /// recurring events, to-dos, journal entries, or time zone
-    /// definitions.
-    ///
-    /// See https://tools.ietf.org/html/rfc5545#section-3.8.5.3
-    public var rrule: ICalendarRecurrenceRule?
 
     // Mutually exclusive specifications of end date
 
@@ -132,6 +118,21 @@ public struct ICalendarEvent: ICalendarComponent {
     public var duration: ICalendarDuration? {
         willSet { dtend = nil }
     }
+
+    /// This property is used in conjunction with the "UID" and
+    /// "SEQUENCE" properties to identify a specific instance of a
+    /// recurring "VEVENT", "VTODO", or "VJOURNAL" calendar component.
+    /// The property value is the original value of the "DTSTART" property
+    /// of the recurrence instance.
+    ///
+    /// See https://tools.ietf.org/html/rfc5545#section-3.8.4.4
+    public var recurrenceId: Date?
+    /// This property defines a rule or repeating pattern for
+    /// recurring events, to-dos, journal entries, or time zone
+    /// definitions.
+    ///
+    /// See https://tools.ietf.org/html/rfc5545#section-3.8.5.3
+    public var rrule: ICalendarRecurrenceRule?
 
     // TODO: Define properties that can be specified multiple times:
     // public var attachments
@@ -165,10 +166,10 @@ public struct ICalendarEvent: ICalendarComponent {
             .line("SUMMARY", summary),
             .line("TRANSP", transp),
             .line("URL", url),
-            .line("RECURRENCE-ID", recurrenceId),
-            .line("RRULE", rrule),
             .line("DTEND", dtend),
-            .line("DURATION", duration)
+            .line("DURATION", duration),
+            .line("RECURRENCE-ID", recurrenceId),
+            .line("RRULE", rrule)
         ]
     }
 
@@ -189,10 +190,10 @@ public struct ICalendarEvent: ICalendarComponent {
         summary: String? = nil,
         transp: String? = nil,
         url: URL? = nil,
-        recurrenceId: Date? = nil,
-        rrule: ICalendarRecurrenceRule? = nil,
         dtend: ICalendarDate? = nil,
         duration: ICalendarDuration? = nil,
+        recurrenceId: Date? = nil,
+        rrule: ICalendarRecurrenceRule? = nil,
         alarms: [ICalendarAlarm] = []
     ) {
         self.dtstamp = dtstamp

@@ -17,7 +17,11 @@ var cal = ICalendar()
 cal.events.append(ICalendarEvent(
     description: "My awesome event",
     dtstart: .dateTime(Date()),
-    duration: ICalendarDuration(hours: 1)
+    duration: .hours(1),
+    rrule: .init(
+        frequency: .weekly,
+        byDay: [.every(.tuesday), .every(.saturday)]
+    )
 ))
 
 print(cal.iCalendarEncoded)
@@ -29,13 +33,14 @@ print(cal.iCalendarEncoded)
 // PRODID:-//swift-icalendar//swift-icalendar//EN
 // CALSCALE:GREGORIAN
 // BEGIN:VEVENT
-// DTSTAMP:20201016T194809Z
-// UID:B22CF435-BE06-4EE9-B7B0-6EE6878E3A06
-// CREATED:20201016T194809Z
+// DTSTAMP:20201017T000135Z
+// UID:327278D1-F140-49C9-AB75-C1D9579C1851
+// CREATED:20201017T000135Z
 // DESCRIPTION:My awesome event
-// DTSTART:20201016T194809Z
-// LAST-MODIFIED:20201016T194809Z
+// DTSTART:20201017T000135Z
+// LAST-MODIFIED:20201017T000135Z
 // DURATION:P0DT1H0M0S
+// RRULE:FREQ=WEEKLY;BYDAY=TU,SA
 // END:VEVENT
 // END:VCALENDAR
 ```
