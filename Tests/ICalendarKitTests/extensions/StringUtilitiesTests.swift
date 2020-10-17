@@ -1,6 +1,6 @@
 import XCTest
 import Foundation
-@testable import ICalendar
+@testable import ICalendarKit
 
 final class StringUtilitiesTests: XCTestCase {
     static var allTests = [

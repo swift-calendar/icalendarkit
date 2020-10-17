@@ -1,6 +1,6 @@
 import XCTest
 import Foundation
-@testable import ICalendar
+@testable import ICalendarKit
 
 final class ICalendarRecurrenceRuleTests: XCTestCase {
     static var allTests = [

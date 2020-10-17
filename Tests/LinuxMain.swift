@@ -1,7 +1,7 @@
 import XCTest
 
-import ICalendarTests
+import ICalendarKitTests
 
 var tests = [XCTestCaseEntry]()
-tests += ICalendarTests.allTests()
+tests += ICalendarKitTests.allTests()
 XCTMain(tests)
