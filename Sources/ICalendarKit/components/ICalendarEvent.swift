@@ -1,10 +1,11 @@
 import Foundation
+import VComponentKit
 
 /// Provides a grouping of component properties that
 /// describes an event.
 ///
 /// See https://tools.ietf.org/html/rfc5545#section-3.6.1
-public struct ICalendarEvent: ICalendarComponent {
+public struct ICalendarEvent: VComponent {
     public let component: String = "VEVENT"
 
     /// In the case of an iCalendar object that specifies a
@@ -146,9 +147,9 @@ public struct ICalendarEvent: ICalendarComponent {
     // public var rdates
 
     public var alarms: [ICalendarAlarm]
-    public var children: [ICalendarComponent] { alarms }
+    public var children: [VComponent] { alarms }
 
-    public var properties: [ICalendarContentLine?] {
+    public var properties: [VContentLine?] {
         [
             .line("DTSTAMP", dtstamp),
             .line("UID", uid),

@@ -1,10 +1,11 @@
 import Foundation
+import VComponentKit
 
 /// Provide a grouping of calendar properties that describe a
 /// to-do.
 ///
 /// See https://tools.ietf.org/html/rfc5545#section-3.6.2
-public struct ICalendarToDo: ICalendarComponent {
+public struct ICalendarToDo: VComponent {
     public let component: String = "VTODO"
 
     /// In the case of an iCalendar object that specifies a
@@ -153,9 +154,9 @@ public struct ICalendarToDo: ICalendarComponent {
     // public var rdates
 
     public var alarms: [ICalendarAlarm]
-    public var children: [ICalendarComponent] { alarms }
+    public var children: [VComponent] { alarms }
 
-    public var properties: [ICalendarContentLine?] {
+    public var properties: [VContentLine?] {
         [
             .line("DTSTAMP", dtstamp),
             .line("UID", uid),

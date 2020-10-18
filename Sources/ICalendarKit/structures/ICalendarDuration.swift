@@ -1,3 +1,5 @@
+import VComponentKit
+
 fileprivate let second: Int64 = 1
 fileprivate let minute: Int64 = second * 60
 fileprivate let hour: Int64 = minute * 60
@@ -7,7 +9,7 @@ fileprivate let week: Int64 = day * 7
 /// Specifies a positive duration of time.
 ///
 /// See https://tools.ietf.org/html/rfc5545#section-3.8.2.5
-public struct ICalendarDuration: ICalendarPropertyEncodable, AdditiveArithmetic {
+public struct ICalendarDuration: VPropertyEncodable, AdditiveArithmetic {
     public static let zero: ICalendarDuration = ICalendarDuration(totalSeconds: 0)
 
     /// The total seconds of this day.
@@ -27,7 +29,7 @@ public struct ICalendarDuration: ICalendarPropertyEncodable, AdditiveArithmetic 
         return (weeks: Int(weeks), days: Int(days), hours: Int(hours), minutes: Int(minutes), seconds: Int(seconds))
     }
     
-    public var iCalendarEncoded: String {
+    public var vEncoded: String {
         var encodedDuration: String
         let (weeks, days, hours, minutes, seconds) = parts
 

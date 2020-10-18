@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "vcomponentkit",
+        "repositoryURL": "https://github.com/swift-calendar/vcomponentkit.git",
+        "state": {
+          "branch": null,
+          "revision": "1138ceb7e9260938bf4d1086ce1919353b528027",
+          "version": "1.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

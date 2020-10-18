@@ -1,7 +1,9 @@
+import VComponentKit
+
 /// A collection of calendaring and scheduling information.
 ///
 /// See https://tools.ietf.org/html/rfc5545#section-3.4
-public struct ICalendar: ICalendarComponent {
+public struct ICalendar: VComponent {
     public let component = "VCALENDAR"
 
     /// The identifier corresponding to the highest version number
@@ -36,11 +38,11 @@ public struct ICalendar: ICalendarComponent {
     public var timeZones: [ICalendarTimeZone]
     public var alarms: [ICalendarAlarm]
 
-    public var children: [ICalendarComponent] {
-        [events, toDos, journals, freeBusies, timeZones, alarms].flatMap { $0 as! [ICalendarComponent] }
+    public var children: [VComponent] {
+        [events, toDos, journals, freeBusies, timeZones, alarms].flatMap { $0 as! [VComponent] }
     }
 
-    public var properties: [ICalendarContentLine?] {
+    public var properties: [VContentLine?] {
         [
             .line("VERSION", version),
             .line("PRODID", prodid),

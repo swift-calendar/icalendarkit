@@ -1,12 +1,13 @@
 import Foundation
+import VComponentKit
 
 /// A date or date/time for use in calendar
 /// events, todos or free/busy-components.
-public struct ICalendarDate: ICalendarPropertyEncodable {
+public struct ICalendarDate: VPropertyEncodable {
     public var date: Date
     public var ignoreTime: Bool
 
-    public var iCalendarEncoded: String {
+    public var vEncoded: String {
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(secondsFromGMT: 0)
         formatter.dateFormat = "yyyyMMdd\(ignoreTime ? "" : "'T'HHmmss'Z'")"

@@ -44,7 +44,7 @@ final class ICalendarTests: XCTestCase {
             dtend: .dateOnly(dates[4].date)
         ))
 
-        XCTAssertEqual(cal.iCalendarEncoded, [
+        XCTAssertEqual(cal.vEncoded, [
             "BEGIN:VCALENDAR",
             "VERSION:2.0",
             "PRODID:-//swift-icalendar//swift-icalendar//EN",

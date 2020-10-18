@@ -24,7 +24,7 @@ cal.events.append(ICalendarEvent(
     )
 ))
 
-print(cal.iCalendarEncoded)
+print(cal.vEncoded)
 
 // The output looks similar to this:
 //

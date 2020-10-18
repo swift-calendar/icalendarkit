@@ -1,8 +1,10 @@
+import VComponentKit
+
 /// This value type is used to identify properties that contain
 /// a recurrence rule specification.
 ///
 /// See https://tools.ietf.org/html/rfc5545#section-3.3.10
-public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
+public struct ICalendarRecurrenceRule: VPropertyEncodable {
     /// The frequency of the recurrence.
     public var frequency: Frequency
     /// At which interval the recurrence repeats (in terms of the frequency).
@@ -72,7 +74,7 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
     /// Monday by default.
     public var startOfWorkweek: DayOfWeek?
 
-    private var properties: [(String, [ICalendarEncodable]?)] {
+    private var properties: [(String, [VEncodable]?)] {
         [
             ("FREQ", [frequency]),
             ("INTERVAL", interval.map { [$0] }),
@@ -91,11 +93,11 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
         ]
     }
 
-    public var iCalendarEncoded: String {
-        properties.compactMap { (key, values) in values.map { "\(key)=\($0.map(\.iCalendarEncoded).joined(separator: ","))" } }.joined(separator: ";")
+    public var vEncoded: String {
+        properties.compactMap { (key, values) in values.map { "\(key)=\($0.map(\.vEncoded).joined(separator: ","))" } }.joined(separator: ";")
     }
 
-    public enum Frequency: String, ICalendarEncodable {
+    public enum Frequency: String, VEncodable {
         case secondly = "SECONDLY"
         case minutely = "MINUTELY"
         case hourly = "HOURLY"
@@ -104,10 +106,10 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
         case monthly = "MONTHLY"
         case yearly = "YEARLY"
 
-        public var iCalendarEncoded: String { rawValue }
+        public var vEncoded: String { rawValue }
     }
 
-    public enum DayOfWeek: String, ICalendarEncodable {
+    public enum DayOfWeek: String, VEncodable {
         case monday = "MO"
         case tuesday = "TU"
         case wednesday = "WE"
@@ -116,16 +118,16 @@ public struct ICalendarRecurrenceRule: ICalendarPropertyEncodable {
         case saturday = "SA"
         case sunday = "SU"
 
-        public var iCalendarEncoded: String { rawValue }
+        public var vEncoded: String { rawValue }
     }
 
-    public struct Day: ICalendarEncodable {
+    public struct Day: VEncodable {
         /// The week. May be negative.
         public let week: Int?
         /// The day of the week.
         public let dayOfWeek: DayOfWeek
 
-        public var iCalendarEncoded: String { "\(week.map(String.init) ?? "")\(dayOfWeek.iCalendarEncoded)" }
+        public var vEncoded: String { "\(week.map(String.init) ?? "")\(dayOfWeek.vEncoded)" }
 
         public init(week: Int? = nil, dayOfWeek: DayOfWeek) {
             self.week = week
