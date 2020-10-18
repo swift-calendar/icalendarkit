@@ -11,7 +11,7 @@ public struct ICalendarProductIdentifier: VPropertyEncodable {
         "-\(segments.map { "//\($0)" }.joined())"
     }
 
-    public init(segments: [String] = ["swift-icalendar", "swift-icalendar", "EN"]) {
+    public init(segments: [String] = ["swift-calendar", "icalendarkit", "EN"]) {
         self.segments = segments
     }
 }
