@@ -17,7 +17,7 @@
     <a title="Structures  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (55% documented)</p>
+        <p><a href="index.html"> Docs</a> (62% documented)</p>
         <p class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -41,29 +41,6 @@
               <li class="nav-group-task">
                 <a href="Extensions/Date.html">Date</a>
               </li>
-              <li class="nav-group-task">
-                <a href="Extensions/Int.html">Int</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/String.html">String</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/URL.html">URL</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Protocols/ICalendarComponent.html">ICalendarComponent</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/ICalendarEncodable.html">ICalendarEncodable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -74,9 +51,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/ICalendarAlarm.html">ICalendarAlarm</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/ICalendarContentLine.html">ICalendarContentLine</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/ICalendarDate.html">ICalendarDate</a>
@@ -154,7 +128,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendar</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarComponent.html">ICalendarComponent</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendar</span> <span class="p">:</span> <span class="kt">VComponent</span></code></pre>
 
                         </div>
                       </div>
@@ -182,7 +156,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarAlarm</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarComponent.html">ICalendarComponent</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarAlarm</span> <span class="p">:</span> <span class="kt">VComponent</span></code></pre>
 
                         </div>
                       </div>
@@ -213,7 +187,7 @@ describes an event.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarEvent</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarComponent.html">ICalendarComponent</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarEvent</span> <span class="p">:</span> <span class="kt">VComponent</span></code></pre>
 
                         </div>
                       </div>
@@ -241,7 +215,7 @@ describes an event.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarFreeBusy</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarComponent.html">ICalendarComponent</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarFreeBusy</span> <span class="p">:</span> <span class="kt">VComponent</span></code></pre>
 
                         </div>
                       </div>
@@ -269,7 +243,7 @@ describes an event.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarJournal</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarComponent.html">ICalendarComponent</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarJournal</span> <span class="p">:</span> <span class="kt">VComponent</span></code></pre>
 
                         </div>
                       </div>
@@ -297,7 +271,7 @@ describes an event.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarTimeZone</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarComponent.html">ICalendarComponent</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarTimeZone</span> <span class="p">:</span> <span class="kt">VComponent</span></code></pre>
 
                         </div>
                       </div>
@@ -328,39 +302,7 @@ to-do.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarToDo</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarComponent.html">ICalendarComponent</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12ICalendarKit0A11ContentLineV"></a>
-                    <a name="//apple_ref/swift/Struct/ICalendarContentLine" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12ICalendarKit0A11ContentLineV">ICalendarContentLine</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The iCalendar object is organized into individual lines of text,
-called content lines.  Content lines are delimited by a line break,
-which is a CRLF sequence (CR character followed by LF character).</p>
-
-<p>See <a href="https://tools.ietf.org/html/rfc5545#section-3.1">https://tools.ietf.org/html/rfc5545#section-3.1</a></p>
-
-                        <a href="Structs/ICalendarContentLine.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarContentLine</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarEncodable.html">ICalendarEncodable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarToDo</span> <span class="p">:</span> <span class="kt">VComponent</span></code></pre>
 
                         </div>
                       </div>
@@ -389,7 +331,7 @@ events, todos or free/busy-components.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarDate</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarDate</span> <span class="p">:</span> <span class="kt">VPropertyEncodable</span></code></pre>
 
                         </div>
                       </div>
@@ -419,7 +361,7 @@ events, todos or free/busy-components.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarDuration</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a></span><span class="p">,</span> <span class="kt">AdditiveArithmetic</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarDuration</span> <span class="p">:</span> <span class="kt">VPropertyEncodable</span><span class="p">,</span> <span class="kt">AdditiveArithmetic</span></code></pre>
 
                         </div>
                       </div>
@@ -450,7 +392,7 @@ the activity specified by a calendar component.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarGeographicPosition</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarGeographicPosition</span> <span class="p">:</span> <span class="kt">VPropertyEncodable</span></code></pre>
 
                         </div>
                       </div>
@@ -481,7 +423,7 @@ iCalendar object.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarProductIdentifier</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarProductIdentifier</span> <span class="p">:</span> <span class="kt">VPropertyEncodable</span></code></pre>
 
                         </div>
                       </div>
@@ -512,7 +454,7 @@ a recurrence rule specification.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarRecurrenceRule</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ICalendarPropertyEncodable.html">ICalendarPropertyEncodable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarRecurrenceRule</span> <span class="p">:</span> <span class="kt">VPropertyEncodable</span></code></pre>
 
                         </div>
                       </div>
@@ -524,7 +466,7 @@ a recurrence rule specification.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-10-17)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-10-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
