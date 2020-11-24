@@ -121,21 +121,21 @@
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/structures/ICalendarDate.swift",
-      "line": 20,
+      "line": 21,
       "symbol": "ICalendarDate.init(date:ignoreTime:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/structures/ICalendarDate.swift",
-      "line": 25,
+      "line": 26,
       "symbol": "ICalendarDate.dateOnly(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/structures/ICalendarDate.swift",
-      "line": 29,
+      "line": 30,
       "symbol": "ICalendarDate.dateTime(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
