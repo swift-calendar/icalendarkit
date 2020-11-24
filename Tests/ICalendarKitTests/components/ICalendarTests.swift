@@ -43,6 +43,8 @@ final class ICalendarTests: XCTestCase {
             lastModified: dates[3].date,
             dtend: .dateOnly(dates[4].date)
         ))
+        
+        print(cal.vEncoded)
 
         XCTAssertEqual(cal.vEncoded, [
             "BEGIN:VCALENDAR",
