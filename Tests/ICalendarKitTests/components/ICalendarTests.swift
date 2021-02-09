@@ -9,17 +9,23 @@ final class ICalendarTests: XCTestCase {
 
     /// A few dates for testing 
     private var dates: [(date: Date, encoded: String, encodedWithoutTime: String)]!
-
+    private var dateFormatter: DateFormatter = DateFormatter()
+    
     override func setUp() {
         var calendar = Calendar(identifier: .gregorian)
         calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+        
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)!
+        dateFormatter.locale = Locale.init(identifier: "UTC")
+        dateFormatter.dateFormat = "yyyyMMdd'T'HHmmss'Z'"
+        
         dates = (0..<20).map { (i: Int) -> (date: Date, encoded: String, encodedWithoutTime: String) in
-            let year = 1970
-            let month = 1
+            let year = 2021
+            let month = 3
             let day = 1
-            let hour = 0
+            let hour = i
             let minute = 0
-            let second = i
+            let second = 0
 
             let date = calendar.date(from: DateComponents(year: year, month: month, day: day, hour: hour, minute: minute, second: second))!
             let encoded = String(format: "%04d%02d%02dT%02d%02d%02dZ", year, month, day, hour, minute, second)
@@ -33,6 +39,8 @@ final class ICalendarTests: XCTestCase {
         var cal = ICalendar()
         let description = "Test"
         let uid = "test"
+        let dstart = Date()
+        let dstartStr = dateFormatter.string(from: dstart)
 
         cal.events.append(ICalendarEvent(
             dtstamp: dates[0].date,
@@ -41,12 +49,12 @@ final class ICalendarTests: XCTestCase {
             description: description,
             dtstart: .dateTime(dates[2].date),
             lastModified: dates[3].date,
-            dtend: .dateOnly(dates[4].date)
+            dtend: .dateOnly(dates[4].date),
+            timeZone: ICalendarTimeZone(tzid: "America/Mexico_City", daylight: DaylightComponent(tzOffsetFrom: "-0600", rrule: .init(frequency: .yearly, byDay: [.first(.saturday)], byDayOfMonth: [4]), dstart: dstart, tzName: "CDT", tzOffsetTo: "-0500"), standard: StandardComponent(tzOffsetFrom: "-0500", rrule: .init(frequency: .yearly, byDay: [.first(.saturday)], byDayOfMonth: [4]), dstart: dstart, tzName: "CDT", tzOffsetTo: "-0600"))
         ))
         
-        print(cal.vEncoded)
-
-        XCTAssertEqual(cal.vEncoded, [
+        let generatedCalendar: String = cal.vEncoded
+        let manualCalendar: String = [
             "BEGIN:VCALENDAR",
             "VERSION:2.0",
             "PRODID:-//swift-calendar//icalendarkit//EN",
@@ -59,8 +67,28 @@ final class ICalendarTests: XCTestCase {
             "DTSTART:\(dates[2].encoded)",
             "LAST-MODIFIED:\(dates[3].encoded)",
             "DTEND;VALUE=DATE:\(dates[4].encodedWithoutTime)",
+            "BEGIN:VTIMEZONE",
+            "TZID:America/Mexico_City",
+            "BEGIN:DAYLIGHT",
+            "TZOFFSETFROM:-0600",
+            "RRULE:FREQ=YEARLY;BYDAY=1SA;BYMONTHDAY=4",
+            "DTSTART:\(dstartStr)",
+            "TZNAME:CDT",
+            "TZOFFSETTO:-0500",
+            "END:DAYLIGHT",
+            "BEGIN:STANDARD",
+            "TZOFFSETFROM:-0500",
+            "RRULE:FREQ=YEARLY;BYDAY=1SA;BYMONTHDAY=4",
+            "DTSTART:\(dstartStr)",
+            "TZNAME:CDT",
+            "TZOFFSETTO:-0600",
+            "END:STANDARD",
+            "END:VTIMEZONE",
             "END:VEVENT",
             "END:VCALENDAR"
-        ].map { "\($0)\r\n" }.joined())
+        ].map { "\($0)\r\n" }.joined()
+        print()
+
+        XCTAssertEqual(generatedCalendar, manualCalendar)
     }
 }
