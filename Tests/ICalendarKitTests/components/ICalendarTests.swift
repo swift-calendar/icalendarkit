@@ -34,8 +34,41 @@ final class ICalendarTests: XCTestCase {
             return (date: date, encoded: encoded, encodedWithoutTime: encodedWithoutTime)
         }
     }
-
+    
     func testICalendarWithEvent() throws {
+        var cal = ICalendar()
+        let description = "Test"
+        let uid = "test"
+
+        cal.events.append(ICalendarEvent(
+            dtstamp: dates[0].date,
+            uid: uid,
+            created: dates[1].date,
+            description: description,
+            dtstart: .dateTime(dates[2].date),
+            lastModified: dates[3].date,
+            dtend: .dateOnly(dates[4].date)
+        ))
+
+        XCTAssertEqual(cal.vEncoded, [
+            "BEGIN:VCALENDAR",
+            "VERSION:2.0",
+            "PRODID:-//swift-calendar//icalendarkit//EN",
+            "CALSCALE:GREGORIAN",
+            "BEGIN:VEVENT",
+            "DTSTAMP:\(dates[0].encoded)",
+            "UID:\(uid)",
+            "CREATED:\(dates[1].encoded)",
+            "DESCRIPTION:\(description)",
+            "DTSTART:\(dates[2].encoded)",
+            "LAST-MODIFIED:\(dates[3].encoded)",
+            "DTEND;VALUE=DATE:\(dates[4].encodedWithoutTime)",
+            "END:VEVENT",
+            "END:VCALENDAR"
+        ].map { "\($0)\r\n" }.joined())
+    }
+
+    func testICalendarWithEventAndTimeZone() throws {
         var cal = ICalendar()
         let description = "Test"
         let uid = "test"
