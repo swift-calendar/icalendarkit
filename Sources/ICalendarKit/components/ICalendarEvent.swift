@@ -147,7 +147,17 @@ public struct ICalendarEvent: VComponent {
     // public var rdates
 
     public var alarms: [ICalendarAlarm]
-    public var children: [VComponent] { alarms }
+    
+    public var timeZone: ICalendarTimeZone?
+    
+    public var children: [VComponent] {
+        guard let timeZone = self.timeZone else { return alarms }
+        
+        var children: [VComponent] = alarms
+        children.insert(timeZone, at: 0)
+        
+        return children
+    }
 
     public var properties: [VContentLine?] {
         [
@@ -195,7 +205,8 @@ public struct ICalendarEvent: VComponent {
         duration: ICalendarDuration? = nil,
         recurrenceId: Date? = nil,
         rrule: ICalendarRecurrenceRule? = nil,
-        alarms: [ICalendarAlarm] = []
+        alarms: [ICalendarAlarm] = [],
+        timeZone: ICalendarTimeZone? = nil
     ) {
         self.dtstamp = dtstamp
         self.uid = uid
@@ -218,6 +229,7 @@ public struct ICalendarEvent: VComponent {
         self.dtend = dtend
         self.duration = duration
         self.alarms = alarms
+        self.timeZone = timeZone
 
         assert(dtend == nil || duration == nil, "End date/time and duration must not be specified together!")
     }

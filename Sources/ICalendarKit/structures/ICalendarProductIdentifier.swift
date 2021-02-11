@@ -11,6 +11,7 @@ public struct ICalendarProductIdentifier: VPropertyEncodable {
         "-\(segments.map { "//\($0)" }.joined())"
     }
 
+    //TODO add UUID
     public init(segments: [String] = ["swift-calendar", "icalendarkit", "EN"]) {
         self.segments = segments
     }
