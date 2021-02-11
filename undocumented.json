@@ -65,8 +65,15 @@
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendarEvent.swift",
-      "line": 177,
-      "symbol": "ICalendarEvent.init(dtstamp:uid:classification:created:description:dtstart:geo:lastModified:location:organizer:priority:seq:status:summary:transp:url:dtend:duration:recurrenceId:rrule:alarms:)",
+      "line": 151,
+      "symbol": "ICalendarEvent.timeZone",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendarEvent.swift",
+      "line": 187,
+      "symbol": "ICalendarEvent.init(dtstamp:uid:classification:created:description:dtstart:geo:lastModified:location:organizer:priority:seq:status:summary:transp:url:dtend:duration:recurrenceId:rrule:alarms:timeZone:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -85,13 +92,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendarTimeZone.swift",
-      "line": 3,
-      "symbol": "ICalendarTimeZone",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendarToDo.swift",
       "line": 156,
       "symbol": "ICalendarToDo.alarms",
@@ -102,6 +102,48 @@
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendarToDo.swift",
       "line": 185,
       "symbol": "ICalendarToDo.init(dtstamp:uid:classification:created:completed:description:dtstart:geo:lastModified:location:organizer:percentComplete:priority:seq:status:summary:transp:url:due:duration:recurrenceId:rrule:alarms:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/TimeZone/DaylightComponent.swift",
+      "line": 11,
+      "symbol": "DaylightComponent",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/TimeZone/DaylightComponent.swift",
+      "line": 55,
+      "symbol": "DaylightComponent.init(tzOffsetFrom:rrule:dstart:tzName:tzOffsetTo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/TimeZone/StandardComponent.swift",
+      "line": 11,
+      "symbol": "StandardComponent",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/TimeZone/StandardComponent.swift",
+      "line": 55,
+      "symbol": "StandardComponent.init(tzOffsetFrom:rrule:dstart:tzName:tzOffsetTo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/TimeZone/TimeZoneComponent.swift",
+      "line": 3,
+      "symbol": "ICalendarTimeZone",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/TimeZone/TimeZoneComponent.swift",
+      "line": 37,
+      "symbol": "ICalendarTimeZone.init(tzid:daylight:standard:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -240,7 +282,7 @@
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/structures/ICalendarProductIdentifier.swift",
-      "line": 14,
+      "line": 15,
       "symbol": "ICalendarProductIdentifier.init(segments:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
