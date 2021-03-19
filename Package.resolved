@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "vcomponentkit",
-        "repositoryURL": "/Users/jc/Desktop/vcomponentkit",
+        "repositoryURL": "https://github.com/swift-calendar/vcomponentkit.git",
         "state": {
           "branch": null,
           "revision": "65b7f5066fd62fb83811e66e26ee21a326a015ac",
