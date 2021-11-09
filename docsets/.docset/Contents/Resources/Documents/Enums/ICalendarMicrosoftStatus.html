@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ICalendarDate Structure Reference</title>
+    <title>ICalendarMicrosoftStatus Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/ICalendarDate" class="dashAnchor"></a>
-    <a title="ICalendarDate Structure Reference"></a>
+    <a name="//apple_ref/swift/Enum/ICalendarMicrosoftStatus" class="dashAnchor"></a>
+    <a title="ICalendarMicrosoftStatus Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (64% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" alt=""/>
-        ICalendarDate Structure Reference
+        ICalendarMicrosoftStatus Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -120,16 +120,17 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>ICalendarDate</h1>
+            <h1>ICalendarMicrosoftStatus</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ICalendarDate</span> <span class="p">:</span> <span class="kt">VPropertyEncodable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ICalendarMicrosoftStatus</span> <span class="p">:</span> <span class="kt">VPropertyEncodable</span></code></pre>
 
                 </div>
               </div>
-            <p>A date or date/time for use in calendar
-events, todos or free/busy-components.</p>
+            <p>Specifies the BUSY status of an appointment.</p>
+
+<p>See <a href="https://docs.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxcical/cd68eae7-ed65-4dd3-8ea7-ad585c76c736">https://docs.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxcical/cd68eae7-ed65-4dd3-8ea7-ad585c76c736</a></p>
 
           </section>
           <section class="section task-group-section">
@@ -138,9 +139,9 @@ events, todos or free/busy-components.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12ICalendarKit0A4DateV4date10Foundation0C0Vvp"></a>
-                    <a name="//apple_ref/swift/Property/date" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12ICalendarKit0A4DateV4date10Foundation0C0Vvp">date</a>
+                    <a name="/s:12ICalendarKit0A15MicrosoftStatusO4freeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/free" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12ICalendarKit0A15MicrosoftStatusO4freeyA2CmF">free</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -155,7 +156,7 @@ events, todos or free/busy-components.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">free</span></code></pre>
 
                         </div>
                       </div>
@@ -165,9 +166,9 @@ events, todos or free/busy-components.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12ICalendarKit0A4DateV10ignoreTimeSbvp"></a>
-                    <a name="//apple_ref/swift/Property/ignoreTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12ICalendarKit0A4DateV10ignoreTimeSbvp">ignoreTime</a>
+                    <a name="/s:12ICalendarKit0A15MicrosoftStatusO9tentativeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/tentative" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12ICalendarKit0A15MicrosoftStatusO9tentativeyA2CmF">tentative</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -182,7 +183,61 @@ events, todos or free/busy-components.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">ignoreTime</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">tentative</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12ICalendarKit0A15MicrosoftStatusO4busyyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/busy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12ICalendarKit0A15MicrosoftStatusO4busyyA2CmF">busy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">busy</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12ICalendarKit0A15MicrosoftStatusO3oofyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/oof" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12ICalendarKit0A15MicrosoftStatusO3oofyA2CmF">oof</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">oof</span></code></pre>
 
                         </div>
                       </div>
@@ -209,113 +264,6 @@ events, todos or free/busy-components.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">vEncoded</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13VComponentKit18VPropertyEncodableP10parametersSaySS_SaySSGtGvp"></a>
-                    <a name="//apple_ref/swift/Property/parameters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13VComponentKit18VPropertyEncodableP10parametersSaySS_SaySSGtGvp">parameters</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[(</span><span class="kt">String</span><span class="p">,</span> <span class="p">[</span><span class="kt">String</span><span class="p">])]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12ICalendarKit0A4DateV4date10ignoreTimeAC10Foundation0C0V_Sbtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(date:ignoreTime:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12ICalendarKit0A4DateV4date10ignoreTimeAC10Foundation0C0V_Sbtcfc">init(date:<wbr>ignoreTime:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="nv">ignoreTime</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12ICalendarKit0A4DateV8dateOnlyyAC10Foundation0C0VFZ"></a>
-                    <a name="//apple_ref/swift/Method/dateOnly(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12ICalendarKit0A4DateV8dateOnlyyAC10Foundation0C0VFZ">dateOnly(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">dateOnly</span><span class="p">(</span><span class="n">_</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ICalendarDate</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12ICalendarKit0A4DateV8dateTimeyAC10Foundation0C0VFZ"></a>
-                    <a name="//apple_ref/swift/Method/dateTime(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12ICalendarKit0A4DateV8dateTimeyAC10Foundation0C0VFZ">dateTime(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">dateTime</span><span class="p">(</span><span class="n">_</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ICalendarDate</span></code></pre>
 
                         </div>
                       </div>

@@ -2,50 +2,50 @@
   "warnings": [
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendar.swift",
-      "line": 34,
+      "line": 57,
       "symbol": "ICalendar.events",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendar.swift",
-      "line": 35,
+      "line": 58,
       "symbol": "ICalendar.toDos",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendar.swift",
-      "line": 36,
+      "line": 59,
       "symbol": "ICalendar.freeBusies",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendar.swift",
-      "line": 37,
+      "line": 60,
       "symbol": "ICalendar.journals",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendar.swift",
-      "line": 38,
+      "line": 61,
       "symbol": "ICalendar.timeZones",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendar.swift",
-      "line": 39,
+      "line": 62,
       "symbol": "ICalendar.alarms",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendar.swift",
-      "line": 54,
-      "symbol": "ICalendar.init(prodid:calscale:method:events:toDos:freeBusies:journals:timeZones:alarms:)",
+      "line": 81,
+      "symbol": "ICalendar.init(prodid:calscale:method:events:toDos:freeBusies:journals:timeZones:alarms:xWRCalName:xWRCalDesc:xWRRecalID:xPublishedTTL:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -58,22 +58,22 @@
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendarEvent.swift",
-      "line": 149,
+      "line": 179,
       "symbol": "ICalendarEvent.alarms",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendarEvent.swift",
-      "line": 151,
+      "line": 181,
       "symbol": "ICalendarEvent.timeZone",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/components/ICalendarEvent.swift",
-      "line": 187,
-      "symbol": "ICalendarEvent.init(dtstamp:uid:classification:created:description:dtstart:geo:lastModified:location:organizer:priority:seq:status:summary:transp:url:dtend:duration:recurrenceId:rrule:alarms:timeZone:)",
+      "line": 221,
+      "symbol": "ICalendarEvent.init(dtstamp:uid:classification:created:description:dtstart:geo:lastModified:location:organizer:priority:seq:status:summary:transp:url:dtend:duration:recurrenceId:rrule:alarms:timeZone:xMicrosoftCDOAllDayEvent:xMicrosoftCDOBusyStatus:xMicrosoftCDOIntendedStatus:xMicrosoftCDOImportance:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -271,6 +271,55 @@
       "line": 15,
       "symbol": "ICalendarGeographicPosition.init(latitude:longitude:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/structures/ICalendarMicrosoftExtensions.swift",
+      "line": 7,
+      "symbol": "ICalendarMicrosoftStatus.free",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/structures/ICalendarMicrosoftExtensions.swift",
+      "line": 8,
+      "symbol": "ICalendarMicrosoftStatus.tentative",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/structures/ICalendarMicrosoftExtensions.swift",
+      "line": 9,
+      "symbol": "ICalendarMicrosoftStatus.busy",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/structures/ICalendarMicrosoftExtensions.swift",
+      "line": 10,
+      "symbol": "ICalendarMicrosoftStatus.oof",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/structures/ICalendarMicrosoftExtensions.swift",
+      "line": 30,
+      "symbol": "ICalendarMicrosoftImportance.one",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/structures/ICalendarMicrosoftExtensions.swift",
+      "line": 31,
+      "symbol": "ICalendarMicrosoftImportance.two",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/icalendarkit/icalendarkit/Sources/ICalendarKit/structures/ICalendarMicrosoftExtensions.swift",
+      "line": 32,
+      "symbol": "ICalendarMicrosoftImportance.three",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
